@@ -1,0 +1,48 @@
+.btn
+	position: relative
+	display: inline-block
+	height: 40px
+	padding: 0 60px
+	border: none
+	outline: none
+	background: #fff
+	text-align: center
+	border: 1px solid $accent
+	transition: all .6s
+	font-size: 16px
+	letter-spacing: .2px
+	font-weight: 700
+	color: $accent
+	line-height: 40px
+
+	&:hover,
+	&:focus
+		outline: none
+		text-decoration: none
+		cursor: pointer
+		box-shadow: 0 0 10px rgba($accent, 1)
+		background-color: $accent
+		color: #fff
+
+	i
+		margin-left: 15px
+
+
+	&--accent
+		height: 50px
+		line-height: 50px
+		background-color: $accent
+		color: #fff
+
+	&--form
+		border-radius: 5px
+		height: 60px
+		line-height: 60px
+		border-color: #ff6262
+		font-size: 18px
+		font-family: $form
+		color: #ff6262
+
+		&:hover,
+		&:focus
+			background-color: #ff6262
