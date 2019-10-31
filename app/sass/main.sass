@@ -9,8 +9,35 @@
 	margin: 0 auto
 
 .header
+	position: fixed
+	background-color: #fff
+	top: 0
+	right: 0
+	left: 0
 	font-size: 24px
+	z-index: 1000
+	transition: all .6s
 
+	&--active
+		box-shadow: 0 0 5px 0 rgba($accent, .5)
+
+		.header__top,
+		.header__profile
+			display: none
+
+		.header__search
+			display: flex
+			padding: 0 35px
+			width: 28%
+
+	&__search
+		display: none
+
+		&_btn
+			background-color: transparent
+			border: none
+			
+		
 	&__container
 		display: flex
 		justify-content: space-between
@@ -150,6 +177,8 @@
 			text-align: left
 			display: none
 			justify-content: space-between
+			z-index: 2
+			box-shadow: 0 0 5px 0 rgba(#000, .5)
 
 			p
 				text-transform: uppercase
@@ -243,6 +272,7 @@
 
 
 .content
+	margin-top: 160px
 
 	&__container
 		display: flex
@@ -399,8 +429,8 @@
 		&_like
 			display: block
 			position: absolute
-			right: 10px
-			top: 0
+			right: 15px
+			top: 15px
 
 		&_bunner
 			position: relative
@@ -602,66 +632,6 @@
 				transform: translate(0, -50%)
 
 
-.tabs
-	padding-bottom: 40px
-
-	ul
-		display: flex
-		justify-content: space-between
-		margin-bottom: 50px
-
-	li
-		display: block
-		width: 23%
-
-	a
-		position: relative
-		display: block
-		width: 100%
-		border: 5px solid #cacaca
-		padding: 25px
-		font-size: 25px
-		line-height: 1
-		color: #cacaca
-		text-align: center
-		z-index: 1
-		transition: all .6s
-
-		&::after,
-		&::before
-			opacity: 0
-			transition: all .6s
-
-		&::after
-			content: ''
-			position: absolute
-			top: 0
-			bottom: 0
-			right: 0
-			left: 0
-			z-index: 0
-			background-color: $white
-			z-index: -1
-
-		&::before
-			content: ''
-			position: absolute
-			top: -5px
-			bottom: -5px
-			right: -5px
-			left: -5px
-			z-index: -2
-			background-image: linear-gradient(to left, #b19266 0%, #f1deb7)
-
-	.active
-		border: 5px solid transparent
-		color: $accent
-
-		&::before,
-		&::after
-			opacity: 1
-
-
 .other
 	padding-bottom: 60px
 
@@ -709,6 +679,114 @@
 			color: #000
 			font-size: 25px
 			font-weight: 700
+
+
+.tabs
+	padding-bottom: 40px
+
+	&__wrap
+		p, li
+			font-size: 24px
+			line-height: 1.2
+
+		ul
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+		li
+			position: relative
+			width: 48%
+			padding-left: 25px
+			margin-bottom: 10px
+
+			&::before
+				content: '•'
+				position: absolute
+				top: 4px
+				left: 5px
+
+
+	&__description
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&_block
+			width: 48%
+
+		h2
+			margin-bottom: 20px
+
+		h3
+			font-size: 25px
+			margin-bottom: 15px
+
+		p
+			font-size: 22px
+			margin-bottom: 5px
+
+
+	&__item
+		width: 32%
+
+
+
+	&__list
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+
+		li
+			display: block
+			width: 23%
+
+			a
+				position: relative
+				display: block
+				width: 100%
+				border: 5px solid #cacaca
+				padding: 25px
+				font-size: 25px
+				line-height: 1
+				color: #cacaca
+				text-align: center
+				z-index: 1
+				transition: all .6s
+
+				&::after,
+				&::before
+					opacity: 0
+					transition: all .6s
+
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 0
+					left: 0
+					z-index: 0
+					background-color: $white
+					z-index: -1
+
+				&::before
+					content: ''
+					position: absolute
+					top: -5px
+					bottom: -5px
+					right: -5px
+					left: -5px
+					z-index: -2
+					background-image: linear-gradient(to left, #b19266 0%, #f1deb7)
+
+	.active
+		border: 5px solid transparent
+		color: $accent
+
+		&::before,
+		&::after
+			opacity: 1
 
 
 .question
@@ -797,6 +875,7 @@
 
 			img
 				margin-bottom: 15px
+
 
 .recently
 	padding: 40px 0

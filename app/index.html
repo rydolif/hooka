@@ -10,7 +10,7 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
 
-	<link rel="stylesheet" href="css/main.css?v=1">
+	<link rel="stylesheet" href="css/main.min.css?v=1">
 
 </head>
 
@@ -125,6 +125,10 @@
 						</ul>
 					</div>
 					<a href="#" class="header__profile">ЛИЧНЫЙ КАБИНЕТ</a>
+					<form class="header__search">
+						<button class="header__search_btn"><img src="img/search--hover.png" alt=""></button>
+						<input type="search" placeholder="Поиск...">
+					</form>
 					<a href="#" class="header__busket">
 						<p>000 000 РУБ</p>
 						<span class="header__busket_img">
@@ -205,11 +209,11 @@
 				</ul>
 
 				<div class="content__img">
-					<a href="" class="content__img_tovar">
+					<a href="img/tovar.jpg" class="content__img_tovar" data-fancybox="gallery">
 						<img src="img/tovar.jpg" alt="" class="content__img_tovar--img">
 					</a>
 					<a href="#" class="content__img_like"><img src="img/like.png"></a>
-					<a href="#" class="content__img_bunner">
+					<a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox class="content__img_bunner">
 						<img src="img/bunner.png" alt="" class="content__img_bunner--img">
 						<img src="img/play.png" alt="" class="content__img_bunner--play">
 						<p>Посмотрите видеообзор на <span>CWP Razor II</span></p>
@@ -238,7 +242,7 @@
 							</p>
 						</div>
 						<div>
-							<img src="img/size.png" alt="">
+							<img src="img/size2.png" alt="">
 							<p>
 								<span>ДИАМЕТР</span>
 								<b>13 мм</b>
@@ -293,7 +297,7 @@
 
 	<section class="tabs">
 		<div class="container">
-			<ul>
+			<ul class="tabs__list">
 				<li><a href="#one">Особенности</a></li>
 				<li><a href="#two">Описание</a></li>
 				<li><a href="#three">Характеристики</a></li>
@@ -301,13 +305,55 @@
 			</ul>
 
 			<div id="one" class="tabs__wrap">
-				<img src="img/tabs.jpg" alt="">
+				<div class="other__list">
+					<div class="tabs__item other__item">
+						<img src="img/tovar.jpg" alt="" class="other__item_img">
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iure corporis, ea earum, sint adipisci.</p>
+						</div>
+					</div>
+					<div class="tabs__item other__item">
+						<img src="img/tovar.jpg" alt="" class="other__item_img">
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iure corporis, ea earum, sint adipisci.</p>
+						</div>
+					</div>
+					<div class="tabs__item other__item">
+						<img src="img/tovar.jpg" alt="" class="other__item_img">
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iure corporis, ea earum, sint adipisci.</p>
+						</div>
+					</div>
+				</div>
 			</div>
+
 			<div id="two" class="tabs__wrap">
-				<img src="img/tabs.jpg" alt="">
+				<div class="tabs__description">
+					<div class="tabs__description_block">
+						<h2>lorem</h2>
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae adipisci odio dolorum, reiciendis corrupti. Totam temporibus veritatis explicabo expedita recusandae.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ex perspiciatis similique eum at ea recusandae soluta debitis tempora quod doloribus iste voluptate totam nostrum, consequuntur doloremque voluptatibus, ipsum possimus consectetur quos, voluptates deserunt culpa laboriosam? Doloremque sit, rerum hic!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ex perspiciatis similique eum at ea recusandae soluta debitis tempora quod doloribus iste voluptate totam nostrum, consequuntur doloremque voluptatibus, ipsum possimus consectetur quos, voluptates deserunt culpa laboriosam? Doloremque sit, rerum hic!</p>
+					</div>
+					<div class="tabs__wrap_block">
+						<img src="img/tovar.jpg" alt="">
+					</div>
+				</div>
 			</div>
 			<div id="three" class="tabs__wrap">
-				<img src="img/tabs.jpg" alt="">
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt iste dolorem ducimus vitae velit sit doloribus temporibus magnam veritatis. Voluptates possimus doloremque odio magnam! Eaque tempora aspernatur enim sequi.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam laudantium minima quod labore ab repellendus porro, hic libero, aut ratione deserunt impedit itaque nam beatae voluptatum recusandae, quo, quia officiis?</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
+				</ul>
 			</div>
 			<div id="four" class="tabs__wrap">
 				<img src="img/tabs.jpg" alt="">
