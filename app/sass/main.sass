@@ -2,6 +2,697 @@
 @import "base"
 
 
+.container
+	max-width: 1680px
+	padding: 0 15px
+	width: 100%
+	margin: 0 auto
+
+.header
+	font-size: 24px
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__logo
+		display: block
+		width: 7%
+		margin-right: 1%
+
+		img
+			width: 110px
+			height: auto
+	
+	&__wrap
+		width: 92%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		a
+			color: $text
+
+	&__slider
+		line-height: 50px
+		height: 50px
+		width: 55%
+		margin-left: 0
+
+		&_slide
+			overflow: hidden
+			padding-left: 135px
+
+	&__prev,
+	&__next
+		top: 0
+		margin-top: 0
+		background-image: none
+		background-color: $bg
+		width: 50px
+		height: 50px
+		z-index: 3
+		transition: all .6s
+		opacity: 1 !important
+		cursor: pointer
+		
+		&:hover,
+		&:focus
+			outline: none
+			background-color: $white
+
+			span
+				border-color: $bg
+
+		span
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 20px
+			height: 20px
+			border-top: 4px solid $accent
+			border-left: 4px solid $accent
+			transition: all .6s
+
+	&__prev
+		left: 0
+
+		span
+			transform: translate(-30%, -50%) rotate(-45deg)
+
+	&__next
+		left: 50px
+		span
+			transform: translate(-70%, -50%) rotate(135deg)
+
+	&__privilege
+		width: 26%
+
+	&__tel
+		width: 17%
+		text-align: right
+
+		a
+			&:hover,
+			&:focus
+				text-decoration: underline
+
+	&__bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__nav
+		background-color: $bg
+		width: 55%
+		position: relative
+
+		&_catalog
+			&:hover,
+			&:focus
+				.header__nav_list
+					display: flex
+					
+		ul
+			display: flex
+			justify-content: space-between
+			text-align: center
+		li
+			width: 33%
+
+		a
+			display: block
+			width: 100%
+			padding: 35px 0
+			color: $white
+			text-transform: uppercase
+			transition: all .6s
+
+			&:hover,
+			&:focus
+				background-color: $white
+				color: $bg
+
+		&_list
+			position: absolute
+			right: 0
+			left: 0
+			width: 100%
+			background-color: $white
+			padding: 20px
+			text-align: left
+			display: none
+			justify-content: space-between
+
+			p
+				text-transform: uppercase
+				margin-bottom: 25px
+
+			a
+				font-size: 20px
+				color: $bg
+				padding: 0
+				text-transform: none
+
+				&:hover,
+				&:focus
+					color: $accent
+
+			ul
+				flex-direction: column
+				text-align: left
+				width: 28%
+
+			li
+				width: 100%
+	
+	&__profile
+		display: block
+		text-align: center
+		background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
+		text-transform: uppercase
+		width: 26%
+		color: #fff
+		display: block
+		padding: 35px 0
+		font-weight: 700
+		transition: all .6s
+
+		&:hover,
+		&:focus
+			background-position: left
+			color: $white
+	
+	&__busket
+		position: relative
+		display: flex
+		justify-content: space-between
+		width: 17%
+		background-color: $bg
+		color: $white
+		font-weight: 700
+		align-items: center
+		padding: 27px 25px
+
+		&:hover,
+		&:focus
+			color: $white
+
+			.header__busket_hover
+				top: 100%
+				opacity: 1
+				z-index: 1
+
+		&_img
+			position: relative
+
+			span
+				position: absolute
+				right: -5px
+				bottom: -5px
+				display: block
+				width: 25px
+				height: 25px
+				background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
+				border-radius: 50%
+				font-size: 18px
+				line-height: 25px
+				text-align: center
+				color: $text
+
+		&_hover
+			position: absolute
+			right: 0
+			left: 0
+			top: 60%
+			opacity: 0
+			z-index: -1
+			padding: 10px
+			transition: all .6s
+			background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
+			color: $text
+			text-align: center
+			font-size: 18px
+
+
+.content
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__nav
+		width: 7%
+		margin-right: 1%
+		z-index: 1
+
+		&_block
+			position: relative
+			display: block
+			width: 110px
+			height: 100px
+			transition: all .6s
+			background-repeat: no-repeat
+			background-position: center
+			background-color: $bg
+
+			&:hover,
+			&:focus
+				background-color: $white
+
+		&_search
+			background-image: url(../img/search.png)
+
+			&:hover,
+			&:focus
+				background-image: url(../img/search--hover.png)
+
+				.content__nav_search--wrap
+					display: block
+
+			&--wrap
+				position: absolute
+				top: 0
+				left: 100%
+				width: 840px
+				background-color: $white
+				padding-left: 25px
+				display: none
+				
+			input
+				height: 100px
+				line-height: 100px
+				color: $bg
+				font-weight: 700
+
+			&--list
+				max-height: 300px
+				overflow: auto
+				background-color: #f4f4f4
+
+			&--item
+				display: flex
+
+				p
+					font-size: 24px
+					color: $bg
+
+				span
+					display: block
+					color: #a6a6a6
+					font-size: 18px
+
+				img
+					width: 110px
+					height: 100px
+					margin-right: 25px
+
+			&--more
+				position: absolute
+				right: 15px
+				bottom: 15px
+				display: flex
+
+				&:hover,
+				&:focus
+					span
+						background-color: $accent
+
+				span
+					display: block
+					width: 15px
+					height: 15px
+					background-color: $bg
+					border-radius: 50%
+					margin: 0 3px
+					transition: all .6s
+
+
+		&_in
+			background-image: url(../img/in.png)
+
+			&:hover,
+			&:focus
+				background-image: url(../img/in--hover.png)
+
+		&_tel
+			background-image: url(../img/tel.png)
+
+			&:hover,
+			&:focus
+				background-image: url(../img/tel--hover.png)
+
+		&_you
+			background-image: url(../img/you.png)
+
+			&:hover,
+			&:focus
+				background-image: url(../img/you--hover.png)
+	
+	&__main
+		padding-top: 40px
+		width: 92%
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 50px
+
+	&__grums
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		font-size: 25px
+		margin-bottom: 25px
+
+		a
+			color: $bg
+			font-weight: 500
+
+			&:hover,
+			&:focus
+				text-decoration: underline
+				color: $bg
+	
+	&__img
+		width: 55%
+		position: relative
+		display: block
+		
+		&_tovar
+			display: block
+			margin-bottom: 30px
+
+			&--img
+				display: block
+				width: 98%
+				height: auto
+				margin: 0 auto
+
+		&_like
+			display: block
+			position: absolute
+			right: 10px
+			top: 0
+
+		&_bunner
+			position: relative
+			display: block
+			padding: 35px
+			text-align: center
+			color: #fff
+			text-decoration: underline
+			font-size: 20px
+			
+			&:hover,
+			&:hover
+				color: #fff
+
+			span
+				color: $accent
+
+			&--img
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				width: 100%
+				z-index: -1
+
+			&--play
+				margin-bottom: 15px
+
+	&__description
+		width: 43%
+
+		&_brend
+			display: flex
+			justify-content: space-between
+			font-size: 25px
+			color: #a6a6a6
+			font-weight: 500
+			margin-bottom: 25px
+
+		h2
+			font-size: 33px
+			margin-bottom: 20px
+
+		&_price
+			margin-bottom: 50px
+			display: flex
+			justify-content: space-between
+
+			p
+				font-size: 30px
+				font-weight: 500
+
+			span
+				color: #72b166
+				font-size: 20px
+				text-decoration: underline
+
+		&_info
+			display: flex
+			margin-bottom: 50px
+
+			div
+				display: flex
+				align-items: center
+
+
+			p
+				margin-right: 30px
+
+			img
+				float: left
+				margin-right: 5px
+				width: 50px
+				height: 50px
+
+			span, b
+				display: block
+				font-weight: 700
+				font-size: 18px
+
+			span
+				color: #a6a6a6
+
+			b
+				font-size: 21px
+		
+		&_list
+
+			li
+				display: flex
+				justify-content: space-between
+				color: #000
+				font-size: 21px
+				margin-bottom: 15px
+				font-weight: 500
+
+			span
+				width: 50%
+
+		&_color
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 50px
+			font-size: 20px
+			color: #cacaca
+
+			div
+				margin-right: 20px
+				margin-bottom: 25px
+
+				&:last-child
+					margin-right: 0
+
+			label
+				position: relative
+				cursor: pointer
+				display: block
+				width: 30px
+				height: 30px
+				font-size: 28px
+				border: 2px solid transparent
+				transition: all .6s
+				border-radius: 50%
+				margin-bottom: 0
+
+			input[type="radio"]
+				display: none
+
+			input[type="radio"]:checked + label
+				border: 2px solid $accent
+
+
+			&--active
+				color: #000
+				font-weight: 700
+
+			p
+				width: 100%
+
+			b
+				color: #000
+
+		&_btn
+			display: flex
+			margin-bottom: 45px
+
+			div
+				display: flex
+
+				button, input
+					background-color: $accent
+					border: none
+					outline: none
+					border-radius: 0
+					color: #fff
+					line-height: .9
+					border: none
+					transition: all .6s
+					cursor: pointer
+					
+				button
+					font-size: 31px
+					padding: 0 20px
+
+					&:hover,
+					&:focus
+						color: $bg
+						background-color: $white
+						box-shadow: 0 0 10px 0 rgba($accent, .5)
+
+				input
+					font-size: 27px
+					width: 55px
+					padding: 0
+					text-align: center
+
+		&_text
+			position: relative
+			padding-left: 70px
+			margin-bottom: 30px
+			font-size: 20px
+
+			&:last-child
+				margin-bottom: 0
+
+			a
+				color: $text
+				text-decoration: underline
+				
+				&:hover,
+				&:focus
+					color: $text
+
+			img
+				position: absolute
+				top: 50%
+				left: 10px
+				transform: translate(0, -50%)
+
+
+.tabs
+	padding-bottom: 40px
+
+	ul
+		display: flex
+		justify-content: space-between
+		margin-bottom: 50px
+
+	li
+		display: block
+		width: 23%
+
+	a
+		position: relative
+		display: block
+		width: 100%
+		border: 5px solid #cacaca
+		padding: 25px
+		font-size: 25px
+		line-height: 1
+		color: #cacaca
+		text-align: center
+		z-index: 1
+		transition: all .6s
+
+		&::after,
+		&::before
+			opacity: 0
+			transition: all .6s
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			z-index: 0
+			background-color: $white
+			z-index: -1
+
+		&::before
+			content: ''
+			position: absolute
+			top: -5px
+			bottom: -5px
+			right: -5px
+			left: -5px
+			z-index: -2
+			background-image: linear-gradient(to left, #b19266 0%, #f1deb7)
+
+	.active
+		border: 5px solid transparent
+		color: $accent
+
+		&::before,
+		&::after
+			opacity: 1
+
+
+.other
+
+	&__list
+		display: flex
+
+
+	&__item
+		position: relative
+		width: 23%
+
+		h3
+			font-size: 25px
+
+		a
+			display: block
+
+		&_img
+			width: 100%
+
+		&_like
+			position: absolute
+			top: 15px
+			right: 15px
+
+		&_price
+
+
+
+
+.footer
+	height: 100px
 
 
 @import "media" // Always at the end

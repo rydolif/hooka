@@ -1,48 +1,26 @@
 .btn
 	position: relative
 	display: inline-block
-	height: 40px
-	padding: 0 60px
+	height: 70px
+	line-height: 70px
+	padding: 0 70px
 	border: none
 	outline: none
-	background: #fff
+	background: $bg
 	text-align: center
-	border: 1px solid $accent
+	border: none
 	transition: all .6s
-	font-size: 16px
+	font-size: 24px
 	letter-spacing: .2px
-	font-weight: 700
-	color: $accent
-	line-height: 40px
+	font-weight: 500
+	color: $white
+	
 
 	&:hover,
 	&:focus
 		outline: none
 		text-decoration: none
 		cursor: pointer
-		box-shadow: 0 0 10px rgba($accent, 1)
-		background-color: $accent
+		box-shadow: 0 0 10px rgba($bg, 1)
+		background-color: $bg
 		color: #fff
-
-	i
-		margin-left: 15px
-
-
-	&--accent
-		height: 50px
-		line-height: 50px
-		background-color: $accent
-		color: #fff
-
-	&--form
-		border-radius: 5px
-		height: 60px
-		line-height: 60px
-		border-color: #ff6262
-		font-size: 18px
-		font-family: $form
-		color: #ff6262
-
-		&:hover,
-		&:focus
-			background-color: #ff6262

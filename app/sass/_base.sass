@@ -6,8 +6,10 @@ $fonts: 'SF', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
-$accent: #e23030
-$text: #212121
+$accent: #b19266
+$text: #000
+$bg: #20212a
+$white: #fff
 
 //---------------------end-color---------------------
 
@@ -34,13 +36,16 @@ section
 	overflow: hidden
 	
 h1, h2, h3, h4, h5, h6
-	font-weight: 800
+	font-weight: 700
 	line-height: 1.1
 	margin: 0
 	padding: 0
-		
+
 h2
-	font-size: 24px
+	font-size: 33px
+
+	span
+		color: $accent
 
 ul
 	margin: 0
@@ -53,8 +58,6 @@ i
 	color: #fff
 
 input, textarea
-	height: 40px
-	line-height: 40px
 	border-radius: 5px
 	border: 1px solid #ffffff
 	outline: none
@@ -62,8 +65,9 @@ input, textarea
 	-webkit-appearance: none
 	background-color: transparent
 	padding: 0 30px
-	color: #fff
+	color: $accent
 	width: 100%
+	font-size: 25px
 	
 	&:focus:required:invalid
 		border-color: $accent
@@ -78,29 +82,13 @@ input, textarea
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #fff
-		font-size: 14px
+		color: #a6a6a6
+		font-size: 25px
 		line-height: 40px
+		font-weight: 400
 
-select
-	height: 40px
-	border-radius: 5px
-	border: 1px solid #ffffff
-	width: 100%
-	padding: 0 15px
-	-webkit-appearance: none
-	-moz-appearance: none
-	appearance: none
-
-	&:hover,
-	&:focus
-		outline: none
-		border-color: #ededed
-
-
-option
-	padding: 0 15px
-	height: 20px
+sub, sup
+	font-size: 60%
 
 
 b, strong
