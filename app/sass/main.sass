@@ -663,36 +663,213 @@
 
 
 .other
+	padding-bottom: 60px
+
+	h2
+		margin-bottom: 40px
 
 	&__list
 		display: flex
+		justify-content: space-between
 
 
 	&__item
 		position: relative
-		width: 23%
+		width: 23.5%
 
 		h3
 			font-size: 25px
+			margin-bottom: 10px
 
 		a
 			display: block
+			color: $text
 
 		&_img
 			width: 100%
+			display: block
 
 		&_like
 			position: absolute
 			top: 15px
 			right: 15px
 
+			img
+				width: 37px
+
+		&_content
+			padding: 10px 15px
+
+		&_cat
+			font-size: 20px
+			color: #cacaca
+			margin-bottom: 25px
+
 		&_price
+			color: #000
+			font-size: 25px
+			font-weight: 700
 
 
+.question
+	background-color: #f7f7f7
+	padding: 30px 0
+
+	h2
+		margin-bottom: 25px
+
+	input
+		position: relative
+		background-color: #fff
+		z-index: 2
+		height: 70px
+
+	a
+		color: $accent
+
+		&:hover,
+		&:focus
+			text-decoration: underline
+			color: $accent
+	
+	&__sub-title
+		font-size: 20px
+		color: #a6a6a6
+		margin-bottom: 45px
+
+	&__form
+		margin-bottom: 25px
+
+	&__line
+		position: relative
+		display: flex
+		width: 100%
+		transition: all .6s
+		padding: 5px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
+
+	&__btn
+		position: relative
+		width: 70px
+		height: 70px
+		background-color: $accent
+		background-image: url(../img/question.png)
+		background-repeat: no-repeat
+		background-position: center		
+		border: none
+		padding: 0
+		cursor: pointer
+
+	&__item
+		margin-bottom: 40px
+
+		&:last-child
+			margin-bottom: 0
+
+		&_name
+			font-size: 25px
+			margin-bottom: 5px
+			font-weight: 700
+
+			span
+				font-size: 20px
+				color: #a6a6a6
+				font-weight: 400
+
+		&_description
+			font-size: 21px
+			font-weight: 500
+			margin-bottom: 20px
+
+		&_comment
+			padding-left: 25px
+			font-weight: 700
+			color: $accent
+			font-size: 21px
+
+			img
+				margin-bottom: 15px
+
+.recently
+	padding: 40px 0
+	
+	&__item
+		width: 14%
+
+	h3
+		font-size: 20px
 
 
 .footer
-	height: 100px
+	padding: 70px 0
+	background-color: #20212a
+	color: #fff
+
+	h3
+		font-size: 25px
+		margin-bottom: 40px
+
+	a
+		color: #fff
+		font-size: 20px
+		transition: all .6s
+
+		&:hover,
+		&:focus
+			color: $accent
+
+	li
+		margin-bottom: 6px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__col
+		width: 24%
+		margin-bottom: 45px
+
+	&__cart
+		margin-bottom: 35px
+
+		img
+			margin-right: 10px
+
+			&:last-child
+				margin-right: 0
+
+		p
+			font-size: 21px
+
+	&__tel
+		font-size: 25px !important
+
+	&__copy
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		width: 100%
+
+		p
+			width: 75%
+			font-size: 20px
+
+	&__logo
+		display: block
+		width: 24%
+
 
 
 @import "media" // Always at the end
