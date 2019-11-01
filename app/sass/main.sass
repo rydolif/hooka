@@ -171,9 +171,9 @@
 			position: absolute
 			right: 0
 			left: 0
-			width: 100%
+			width: 102%
 			background-color: $white
-			padding: 20px
+			padding: 27px
 			text-align: left
 			display: none
 			justify-content: space-between
@@ -201,6 +201,17 @@
 
 			li
 				width: 100%
+
+			&--bunner
+				position: absolute
+				left: 100%
+				top: 0
+				max-width: 390px
+				width: 100%
+
+				img
+					width: 100%
+
 	
 	&__profile
 		display: block
@@ -274,6 +285,25 @@
 .content
 	margin-top: 160px
 
+	&__tabs
+		margin-top: 70px
+
+		a
+			display: block
+			transition: all .6s
+			margin-bottom: 2px
+
+			&:hover,
+			&:focus
+				transition: all .6s
+				outline: none
+				box-shadow: 0 0 5px 0 $accent
+			
+		img
+			max-width: 100%
+			width: 100%
+			height: auto
+			
 	&__container
 		display: flex
 		justify-content: space-between

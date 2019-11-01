@@ -14,6 +14,19 @@ $(function() {
     $(selectTab).fadeIn();
   });
 
+   
+  $('.content__img_tovar').hide();
+  $('.content__img_tovar:first').show();
+  $('.content__tabs a:first').addClass('active');
+   $('.content__tabs a').click(function(event){
+    event.preventDefault();
+    $('.content__tabs a').removeClass('active');
+    $(this).addClass('active');
+    $('.content__img_tovar').hide();
+     var selectTab = $(this).attr('href');
+    $(selectTab).fadeIn();
+  });
+
 
 //------------------------------slider-----------------------------
   var swiper = new Swiper('.header__slider', {
