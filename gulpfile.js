@@ -43,6 +43,7 @@ gulp.task('minstyles', function() {
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
+	.pipe(rename({ suffix: '.', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browsersync.reload( {stream: true} ))
@@ -51,15 +52,8 @@ gulp.task('styles', function() {
 gulp.task('minjs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
-		// 'app/libs/jquery.validate.js', 					//----форма
-		// 'app/libs/jquery.mask.min.js', 					//----форма
-		'app/libs/jquery.popupoverlay.js', 				//----модалки
-		// 'app/libs/slick/slick.js', 					//----слайдер
-		 // 'app/libs/flipclock/flipclock.js',
 		'app/libs/swiper/swiper.min.js', 			//----слайдер
 		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
-		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
-		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(plumber())
@@ -73,15 +67,9 @@ gulp.task('minjs', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
-		// 'app/libs/jquery.validate.js', 					//----форма
-		// 'app/libs/jquery.mask.min.js', 					//----форма
 		'app/libs/jquery.popupoverlay.js', 				//----модалки
-		// 'app/libs/slick/slick.js', 					//----слайдер
-		 // 'app/libs/flipclock/flipclock.js',			//----таймер
 		'app/libs/swiper/swiper.min.js', 			//----слайдер
 		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
-		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
-		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
 		'app/js/common.js', // Always at the end
 	])
 	.pipe(plumber())

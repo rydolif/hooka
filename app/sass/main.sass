@@ -1,12 +1,16 @@
 @import "libs"
 @import "base"
 
+.compensate-for-scrollbar
+	.header
+		margin-right: 21px
 
 .container
-	max-width: 1680px
+	max-width: 1200px
 	padding: 0 15px
 	width: 100%
 	margin: 0 auto
+
 
 .header
 	position: fixed
@@ -14,9 +18,8 @@
 	top: 0
 	right: 0
 	left: 0
-	font-size: 24px
+	font-size: 18px
 	z-index: 1000
-	transition: all .6s
 
 	&--active
 		box-shadow: 0 0 5px 0 rgba($accent, .5)
@@ -27,7 +30,7 @@
 
 		.header__search
 			display: flex
-			padding: 0 35px
+			padding: 0 20px
 			width: 28%
 
 	&__search
@@ -36,8 +39,11 @@
 		&_btn
 			background-color: transparent
 			border: none
-			
-		
+
+			img
+				width: 25px
+				height: auto
+				
 	&__container
 		display: flex
 		justify-content: space-between
@@ -48,9 +54,19 @@
 		width: 7%
 		margin-right: 1%
 
+		div
+			position: relative
+			width: 80px
+			height: 81px
+			background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
+
 		img
-			width: 110px
-			height: auto
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 60px
+			height: 60px
 	
 	&__wrap
 		width: 92%
@@ -152,12 +168,12 @@
 			justify-content: space-between
 			text-align: center
 		li
-			width: 33%
+			width: 33.3333%
 
 		a
 			display: block
 			width: 100%
-			padding: 35px 0
+			padding: 28px 0
 			color: $white
 			text-transform: uppercase
 			transition: all .6s
@@ -171,21 +187,20 @@
 			position: absolute
 			right: 0
 			left: 0
-			width: 102%
+			width: 100%
 			background-color: $white
-			padding: 27px
+			padding: 27px 20px
 			text-align: left
 			display: none
 			justify-content: space-between
 			z-index: 2
-			box-shadow: 0 0 5px 0 rgba(#000, .5)
 
 			p
 				text-transform: uppercase
-				margin-bottom: 25px
+				margin-bottom: 10px
 
 			a
-				font-size: 20px
+				font-size: 16px
 				color: $bg
 				padding: 0
 				text-transform: none
@@ -206,13 +221,12 @@
 				position: absolute
 				left: 100%
 				top: 0
-				max-width: 390px
+				max-width: 302px
 				width: 100%
 
 				img
 					width: 100%
 
-	
 	&__profile
 		display: block
 		text-align: center
@@ -221,7 +235,7 @@
 		width: 26%
 		color: #fff
 		display: block
-		padding: 35px 0
+		padding: 28px 0
 		font-weight: 700
 		transition: all .6s
 
@@ -239,7 +253,7 @@
 		color: $white
 		font-weight: 700
 		align-items: center
-		padding: 27px 25px
+		padding: 25px 15px
 
 		&:hover,
 		&:focus
@@ -258,14 +272,19 @@
 				right: -5px
 				bottom: -5px
 				display: block
-				width: 25px
-				height: 25px
+				width: 20px
+				height: 20px
 				background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
 				border-radius: 50%
-				font-size: 18px
-				line-height: 25px
+				font-size: 14px
+				line-height: 20px
 				text-align: center
 				color: $text
+
+			img
+				width: 25px
+				height: auto
+				
 
 		&_hover
 			position: absolute
@@ -279,14 +298,14 @@
 			background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
 			color: $text
 			text-align: center
-			font-size: 18px
+			font-size: 16px
 
 
 .content
-	margin-top: 160px
+	margin-top: 131px
 
 	&__tabs
-		margin-top: 70px
+		margin-top: 10px
 
 		a
 			display: block
@@ -317,12 +336,13 @@
 		&_block
 			position: relative
 			display: block
-			width: 110px
-			height: 100px
+			width: 80px
+			height: 80px
 			transition: all .6s
 			background-repeat: no-repeat
 			background-position: center
 			background-color: $bg
+			background-size: 55%
 
 			&:hover,
 			&:focus
@@ -330,6 +350,7 @@
 
 		&_search
 			background-image: url(../img/search.png)
+			background-size: 45%
 
 			&:hover,
 			&:focus
@@ -354,7 +375,7 @@
 				font-weight: 700
 
 			&--list
-				max-height: 300px
+				height: 300px
 				overflow: auto
 				background-color: #f4f4f4
 
@@ -362,7 +383,7 @@
 				display: flex
 
 				p
-					font-size: 24px
+					font-size: 18px
 					color: $bg
 
 				span
@@ -418,7 +439,7 @@
 				background-image: url(../img/you--hover.png)
 	
 	&__main
-		padding-top: 40px
+		padding-top: 20px
 		width: 92%
 		display: flex
 		justify-content: space-between
@@ -429,8 +450,11 @@
 		display: flex
 		flex-wrap: wrap
 		width: 100%
-		font-size: 25px
-		margin-bottom: 25px
+		font-size: 20px
+		margin-bottom: 15px
+
+		span
+			padding: 0 8px
 
 		a
 			color: $bg
@@ -440,6 +464,10 @@
 			&:focus
 				text-decoration: underline
 				color: $bg
+
+		.active
+			border: none !important
+			color: $text !important
 	
 	&__img
 		width: 55%
@@ -448,11 +476,11 @@
 		
 		&_tovar
 			display: block
-			margin-bottom: 30px
+			margin-bottom: 20px
 
 			&--img
 				display: block
-				width: 98%
+				width: 100%
 				height: auto
 				margin: 0 auto
 
@@ -465,11 +493,11 @@
 		&_bunner
 			position: relative
 			display: block
-			padding: 35px
+			padding: 20px
 			text-align: center
 			color: #fff
 			text-decoration: underline
-			font-size: 20px
+			font-size: 18px
 			
 			&:hover,
 			&:hover
@@ -488,30 +516,34 @@
 				z-index: -1
 
 			&--play
-				margin-bottom: 15px
-
+				margin-bottom: 10px
+				width: 55px
+				height: auto
+					
 	&__description
 		width: 43%
 
 		&_brend
 			display: flex
 			justify-content: space-between
-			font-size: 25px
+			flex-wrap: wrap
+			font-size: 22px
 			color: #a6a6a6
 			font-weight: 500
-			margin-bottom: 25px
+			margin-bottom: 15px
 
 		h2
-			font-size: 33px
-			margin-bottom: 20px
+			margin-bottom: 15px
 
 		&_price
-			margin-bottom: 50px
+			margin-bottom: 30px
 			display: flex
 			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
 
 			p
-				font-size: 30px
+				font-size: 26px
 				font-weight: 500
 
 			span
@@ -521,21 +553,21 @@
 
 		&_info
 			display: flex
-			margin-bottom: 50px
+			flex-wrap: wrap
+			margin-bottom: 30px
 
 			div
 				display: flex
 				align-items: center
 
-
 			p
-				margin-right: 30px
+				margin-right: 20px
 
 			img
 				float: left
 				margin-right: 5px
-				width: 50px
-				height: 50px
+				width: 40px
+				height: 40px
 
 			span, b
 				display: block
@@ -546,16 +578,17 @@
 				color: #a6a6a6
 
 			b
-				font-size: 21px
+				font-size: 16px
 		
 		&_list
 
 			li
 				display: flex
 				justify-content: space-between
+				flex-wrap: wrap
 				color: #000
-				font-size: 21px
-				margin-bottom: 15px
+				font-size: 18px
+				margin-bottom: 10px
 				font-weight: 500
 
 			span
@@ -564,13 +597,13 @@
 		&_color
 			display: flex
 			flex-wrap: wrap
-			margin-bottom: 50px
-			font-size: 20px
+			margin-bottom: 34px
+			font-size: 18px
 			color: #cacaca
 
 			div
 				margin-right: 20px
-				margin-bottom: 25px
+				margin-bottom: 15px
 
 				&:last-child
 					margin-right: 0
@@ -606,7 +639,7 @@
 
 		&_btn
 			display: flex
-			margin-bottom: 45px
+			margin-bottom: 15px
 
 			div
 				display: flex
@@ -623,17 +656,16 @@
 					cursor: pointer
 					
 				button
-					font-size: 31px
+					font-size: 24px
 					padding: 0 20px
 
 					&:hover,
 					&:focus
 						color: $bg
 						background-color: $white
-						box-shadow: 0 0 10px 0 rgba($accent, .5)
 
 				input
-					font-size: 27px
+					font-size: 24px
 					width: 55px
 					padding: 0
 					text-align: center
@@ -641,8 +673,8 @@
 		&_text
 			position: relative
 			padding-left: 70px
-			margin-bottom: 30px
-			font-size: 20px
+			margin-bottom: 10px
+			font-size: 16px
 
 			&:last-child
 				margin-bottom: 0
@@ -678,8 +710,8 @@
 		width: 23.5%
 
 		h3
-			font-size: 25px
-			margin-bottom: 10px
+			font-size: 20px
+			margin-bottom: 5px
 
 		a
 			display: block
@@ -691,32 +723,36 @@
 
 		&_like
 			position: absolute
-			top: 15px
-			right: 15px
+			top: 10px
+			right: 10px
 
 			img
-				width: 37px
-
+				width: 32px
+				height: auto
+				
 		&_content
-			padding: 10px 15px
+			padding: 10px
 
 		&_cat
-			font-size: 20px
+			font-size: 18px
 			color: #cacaca
-			margin-bottom: 25px
+			margin-bottom: 5px
 
 		&_price
 			color: #000
-			font-size: 25px
+			font-size: 20px
 			font-weight: 700
 
 
 .tabs
 	padding-bottom: 40px
 
+	img
+		max-width: 100%
+
 	&__wrap
 		p, li
-			font-size: 24px
+			font-size: 18px
 			line-height: 1.2
 
 		ul
@@ -736,7 +772,6 @@
 				top: 4px
 				left: 5px
 
-
 	&__description
 		display: flex
 		justify-content: space-between
@@ -749,23 +784,22 @@
 			margin-bottom: 20px
 
 		h3
-			font-size: 25px
+			font-size: 18px
 			margin-bottom: 15px
 
 		p
-			font-size: 22px
+			font-size: 16px
 			margin-bottom: 5px
+
 
 
 	&__item
 		width: 32%
 
-
-
 	&__list
 		display: flex
 		justify-content: space-between
-		margin-bottom: 50px
+		margin-bottom: 40px
 
 		li
 			display: block
@@ -776,8 +810,8 @@
 				display: block
 				width: 100%
 				border: 5px solid #cacaca
-				padding: 25px
-				font-size: 25px
+				padding: 20px
+				font-size: 20px
 				line-height: 1
 				color: #cacaca
 				text-align: center
@@ -824,13 +858,15 @@
 	padding: 30px 0
 
 	h2
-		margin-bottom: 25px
+		margin-bottom: 15px
 
 	input
 		position: relative
 		background-color: #fff
 		z-index: 2
 		height: 70px
+		border-radius: 0
+		color: #000
 
 	a
 		color: $accent
@@ -846,7 +882,7 @@
 		margin-bottom: 45px
 
 	&__form
-		margin-bottom: 25px
+		margin-bottom: 15px
 
 	&__line
 		position: relative
@@ -883,7 +919,7 @@
 			margin-bottom: 0
 
 		&_name
-			font-size: 25px
+			font-size: 22px
 			margin-bottom: 5px
 			font-weight: 700
 
@@ -914,21 +950,21 @@
 		width: 14%
 
 	h3
-		font-size: 20px
+		font-size: 16px
 
 
 .footer
-	padding: 70px 0
+	padding: 40px 0
 	background-color: #20212a
 	color: #fff
 
 	h3
-		font-size: 25px
+		font-size: 22px
 		margin-bottom: 40px
 
 	a
 		color: #fff
-		font-size: 20px
+		font-size: 18px
 		transition: all .6s
 
 		&:hover,
@@ -936,7 +972,7 @@
 			color: $accent
 
 	li
-		margin-bottom: 6px
+		margin-bottom: 5px
 
 		&:last-child
 			margin-bottom: 0
@@ -948,14 +984,16 @@
 
 	&__col
 		width: 24%
-		margin-bottom: 45px
+		margin-bottom: 25px
 
 	&__cart
-		margin-bottom: 35px
+		margin-bottom: 25px
 
 		img
-			margin-right: 10px
-
+			margin-right: 5px
+			width: 30%
+			height: auto
+			
 			&:last-child
 				margin-right: 0
 
@@ -963,7 +1001,7 @@
 			font-size: 21px
 
 	&__tel
-		font-size: 25px !important
+		font-size: 22px !important
 
 	&__copy
 		display: flex
@@ -973,7 +1011,10 @@
 
 		p
 			width: 75%
-			font-size: 20px
+			font-size: 18px
+
+		img
+			max-width: 80%
 
 	&__logo
 		display: block
