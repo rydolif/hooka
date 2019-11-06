@@ -18,7 +18,7 @@
 	top: 0
 	right: 0
 	left: 0
-	font-size: 18px
+	font-size: 16px
 	z-index: 1000
 
 	&--active
@@ -57,7 +57,7 @@
 		div
 			position: relative
 			width: 80px
-			height: 81px
+			height: 70px
 			background-image: linear-gradient(to right, #b19266 0%, #f1deb7)
 
 		img
@@ -69,7 +69,7 @@
 			height: 60px
 	
 	&__wrap
-		width: 92%
+		width: 91%
 		display: flex
 		flex-direction: column
 		justify-content: space-between
@@ -83,9 +83,9 @@
 			color: $text
 
 	&__slider
-		line-height: 50px
-		height: 50px
-		width: 55%
+		line-height: 45px
+		height: 45px
+		width: 53%
 		margin-left: 0
 
 		&_slide
@@ -98,8 +98,8 @@
 		margin-top: 0
 		background-image: none
 		background-color: $bg
-		width: 50px
-		height: 50px
+		width: 45px
+		height: 45px
 		z-index: 3
 		transition: all .6s
 		opacity: 1 !important
@@ -118,8 +118,8 @@
 			position: absolute
 			top: 50%
 			left: 50%
-			width: 20px
-			height: 20px
+			width: 18px
+			height: 18px
 			border-top: 4px solid $accent
 			border-left: 4px solid $accent
 			transition: all .6s
@@ -131,7 +131,7 @@
 			transform: translate(-30%, -50%) rotate(-45deg)
 
 	&__next
-		left: 50px
+		left: 45px
 		span
 			transform: translate(-70%, -50%) rotate(135deg)
 
@@ -154,7 +154,7 @@
 
 	&__nav
 		background-color: $bg
-		width: 55%
+		width: 53%
 		position: relative
 
 		&_catalog
@@ -173,7 +173,7 @@
 		a
 			display: block
 			width: 100%
-			padding: 28px 0
+			padding: 24px 0
 			color: $white
 			text-transform: uppercase
 			transition: all .6s
@@ -187,7 +187,7 @@
 			position: absolute
 			right: 0
 			left: 0
-			width: 100%
+			width: 103.7%
 			background-color: $white
 			padding: 27px 20px
 			text-align: left
@@ -221,7 +221,7 @@
 				position: absolute
 				left: 100%
 				top: 0
-				max-width: 302px
+				max-width: 276px
 				width: 100%
 
 				img
@@ -235,7 +235,7 @@
 		width: 26%
 		color: #fff
 		display: block
-		padding: 28px 0
+		padding: 24px 0
 		font-weight: 700
 		transition: all .6s
 
@@ -247,13 +247,14 @@
 	&__busket
 		position: relative
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
 		width: 17%
 		background-color: $bg
 		color: $white
 		font-weight: 700
 		align-items: center
-		padding: 25px 15px
+		padding: 22px 15px
+		max-height: 70px
 
 		&:hover,
 		&:focus
@@ -302,7 +303,7 @@
 
 
 .content
-	margin-top: 131px
+	margin-top: 115px
 
 	&__tabs
 		margin-top: 10px
@@ -316,7 +317,7 @@
 			&:focus
 				transition: all .6s
 				outline: none
-				box-shadow: 0 0 5px 0 $accent
+				// box-shadow: 0 0 5px 0 $accent
 			
 		img
 			max-width: 100%
@@ -342,7 +343,7 @@
 			background-repeat: no-repeat
 			background-position: center
 			background-color: $bg
-			background-size: 55%
+			background-size: 50%
 
 			&:hover,
 			&:focus
@@ -350,7 +351,7 @@
 
 		&_search
 			background-image: url(../img/search.png)
-			background-size: 45%
+			background-size: 40%
 
 			&:hover,
 			&:focus
@@ -381,6 +382,11 @@
 
 			&--item
 				display: flex
+				transition: all .6s
+
+				&:hover,
+				&:focus
+					background-color: #cacaca
 
 				p
 					font-size: 18px
@@ -401,9 +407,12 @@
 				right: 15px
 				bottom: 15px
 				display: flex
+				color: $text
 
 				&:hover,
 				&:focus
+					color: $text
+
 					span
 						background-color: $accent
 
@@ -440,21 +449,20 @@
 	
 	&__main
 		padding-top: 20px
-		width: 92%
+		width: 91%
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		margin-bottom: 50px
 
 	&__grums
 		display: flex
 		flex-wrap: wrap
 		width: 100%
-		font-size: 20px
-		margin-bottom: 15px
+		font-size: 18px
+		margin-bottom: 10px
 
 		span
-			padding: 0 8px
+			padding: 0 5px
 
 		a
 			color: $bg
@@ -470,7 +478,7 @@
 			color: $text !important
 	
 	&__img
-		width: 55%
+		width: 53%
 		position: relative
 		display: block
 		
@@ -489,6 +497,9 @@
 			position: absolute
 			right: 15px
 			top: 15px
+
+			img
+				width: 33px
 
 		&_bunner
 			position: relative
@@ -521,13 +532,13 @@
 				height: auto
 					
 	&__description
-		width: 43%
+		width: 45%
 
 		&_brend
 			display: flex
 			justify-content: space-between
 			flex-wrap: wrap
-			font-size: 22px
+			font-size: 18px
 			color: #a6a6a6
 			font-weight: 500
 			margin-bottom: 15px
@@ -543,12 +554,12 @@
 			flex-wrap: wrap
 
 			p
-				font-size: 26px
+				font-size: 22px
 				font-weight: 500
 
 			span
 				color: #72b166
-				font-size: 20px
+				font-size: 18px
 				text-decoration: underline
 
 		&_info
@@ -710,7 +721,7 @@
 		width: 23.5%
 
 		h3
-			font-size: 20px
+			font-size: 18px
 			margin-bottom: 5px
 
 		a
@@ -740,7 +751,7 @@
 
 		&_price
 			color: #000
-			font-size: 20px
+			font-size: 18px
 			font-weight: 700
 
 
@@ -791,15 +802,13 @@
 			font-size: 16px
 			margin-bottom: 5px
 
-
-
 	&__item
 		width: 32%
 
 	&__list
 		display: flex
 		justify-content: space-between
-		margin-bottom: 40px
+		margin-bottom: 30px
 
 		li
 			display: block
@@ -810,8 +819,8 @@
 				display: block
 				width: 100%
 				border: 5px solid #cacaca
-				padding: 20px
-				font-size: 20px
+				padding: 15px
+				font-size: 18px
 				line-height: 1
 				color: #cacaca
 				text-align: center
@@ -877,9 +886,9 @@
 			color: $accent
 	
 	&__sub-title
-		font-size: 20px
+		font-size: 17px
 		color: #a6a6a6
-		margin-bottom: 45px
+		margin-bottom: 25px
 
 	&__form
 		margin-bottom: 15px
@@ -924,23 +933,23 @@
 			font-weight: 700
 
 			span
-				font-size: 20px
+				font-size: 18px
 				color: #a6a6a6
 				font-weight: 400
 
 		&_description
-			font-size: 21px
+			font-size: 18px
 			font-weight: 500
-			margin-bottom: 20px
+			margin-bottom: 15px
 
 		&_comment
 			padding-left: 25px
 			font-weight: 700
 			color: $accent
-			font-size: 21px
+			font-size: 18px
 
 			img
-				margin-bottom: 15px
+				margin-bottom: 10px
 
 
 .recently
@@ -959,8 +968,8 @@
 	color: #fff
 
 	h3
-		font-size: 22px
-		margin-bottom: 40px
+		font-size: 18px
+		margin-bottom: 30px
 
 	a
 		color: #fff
@@ -998,10 +1007,10 @@
 				margin-right: 0
 
 		p
-			font-size: 21px
+			font-size: 18px
 
 	&__tel
-		font-size: 22px !important
+		font-size: 18px !important
 
 	&__copy
 		display: flex
