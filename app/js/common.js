@@ -20,20 +20,6 @@ $(document).ready(function() {
 $(function() {
 
 //---------------------------catalog slider-----------------------
-  $( "#slider-range" ).slider({
-    range: true,
-    min: 0,
-    max: 20000,
-    values: [ 100, 3000 ],
-    slide: function( event, ui ) {
-      $( "#amount-min" ).val( ui.values[ 0 ] + " руб" );
-      $( "#amount-max" ).val( ui.values[ 1 ] + " руб" );
-    }
-  });
-  $( "#amount-min" ).val( $( "#slider-range" ).slider( "values", 0 ) + " руб" );
-  $( "#amount-max" ).val( $( "#slider-range" ).slider( "values", 1 ) + " руб" );
-
-//---------------------------catalog slider-----------------------
   var swiper = new Swiper('.catalog__slider', {
     slidesPerView: 3,
     spaceBetween: 25,

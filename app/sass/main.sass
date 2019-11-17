@@ -695,6 +695,10 @@
 					padding: 0
 					text-align: center
 
+					&::placeholder
+						color: #fff
+						font-size: 24px
+
 		&_text
 			position: relative
 			padding-left: 70px
@@ -733,6 +737,105 @@
 		position: relative
 		width: 23.5%
 
+		&:hover,
+		&:focus
+
+			.other__item_footer
+				top: 100%
+				opacity: 1
+
+		&_link
+			position: relative
+
+			&:hover,
+			&:focus
+				.btn
+					opacity: 1
+
+			.btn
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				width: 100%
+				opacity: 0
+				height: 50px
+				line-height: 50px
+				color: #fff
+				font-size: 16px
+
+				&:hover,
+				&:focus
+					color: #fff !important
+
+		&_footer
+			position: absolute
+			top: 80%
+			right: 0
+			left: 0
+			background-color: #fff
+			font-size: 14px
+			text-align: center
+			opacity: 0
+			transition: all .6s
+			z-index: 100
+
+			p
+				margin-bottom: 15px
+
+			img
+				margin-right: 5px
+
+			button
+				font-size: 14px
+				height: 50px
+				line-height: 50px
+				padding: 0
+				width: 100%
+
+			div
+				button
+					width: 35px
+					padding: 0
+					font-weight: 700
+					font-size: 16px
+
+				input
+					height: 50px
+					line-height: 50px
+					padding: 0
+					font-size: 14px 
+					width: 35px
+
+					&::placeholder
+						font-size: 14px
+		
+		&_form
+			margin-bottom: 0
+
+		&_label
+			position: absolute
+			left: 0
+			top: 0
+			background-color: #000
+			width: 130px
+			transform: translate(-40%, 53px) rotate(-90deg)
+			color: #fff
+			font-size: 16px
+			line-height: 1.6
+			text-transform: uppercase
+			text-align: center
+			letter-spacing: 1px
+
+			&--green
+				background-color: #76b166
+
+			&--blue
+				background-color: #6682b1
+
+			&--red
+				background-color: #db4646
+
 		h3
 			font-size: 18px
 			margin-bottom: 5px
@@ -740,8 +843,14 @@
 		a
 			display: block
 			color: $text
+			transition: all .6s
+
+			&:hover,
+			&:focus
+				color: $accent !important
 
 		&_img
+			position: relative
 			width: 100%
 			display: block
 
@@ -750,23 +859,35 @@
 			top: 10px
 			right: 10px
 
-			img
-				width: 32px
+			&:hover
+				svg
+					fill: $accent
+
+			svg
+				width: 25px
 				height: auto
+				fill: #000
+				transition: all .6s
 				
 		&_content
 			padding: 10px
 
 		&_cat
 			font-size: 18px
-			color: #cacaca
+			color: #cacaca !important
 			margin-bottom: 5px
+			transition: all .6s
+
 
 		&_price
 			color: #000
 			font-size: 18px
 			font-weight: 700
 
+		&--active
+
+			svg
+				fill: #db4646
 
 .tabs
 	padding-bottom: 40px
@@ -1127,6 +1248,7 @@
 			padding: 10px 15px
 			margin-bottom: 35px
 			font-size: 18px
+			width: 100%
 
 			p
 				margin-right: 45px

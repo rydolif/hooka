@@ -40,44 +40,6 @@
 		line-height: 50px
 		font-size: 16px
 
-	.catalog
-		&__slider
-			max-width: 86%
-			margin-bottom: 20px
-
-			&_prev
-				left: 5px
-
-			&_next
-				right: 5px
-
-		&__main
-			&_grums
-				margin-bottom: 5px
-
-			h1
-				margin-bottom: 15px
-
-			&_item
-				width: 45%
-				margin-bottom: 20px
-
-			&_filter
-				font-size: 16px
-
-				a, p
-					margin-right: 25px
-
-			&_brend
-				&--price input
-					font-size: 14px
-
-				&--item
-					font-size: 14px
-
-			&_pagination
-				padding: 0 15px
-
 	.header
 		font-size: 14px
 
@@ -121,7 +83,7 @@
 
 			&_list
 				padding: 15px
-				
+
 				a
 					padding: 0
 					height: auto
@@ -270,13 +232,12 @@
 			li, p
 				font-size: 14px
 
-
 	.other
 		padding-bottom: 20px
 
 		&__item
 			h3
-				font-size: 18px
+				font-size: 16px
 
 			&_like img
 				width: 26px
@@ -304,7 +265,6 @@
 					width: 30px
 					height: auto
 					margin-bottom: 5px
-					
 	
 	.recently
 		padding: 20px 0
@@ -334,6 +294,48 @@
 			p
 				br
 					display: none
+
+	.catalog
+		.other__item_form
+			flex-wrap: nowrap
+
+		&__slider
+			max-width: 86%
+			margin-bottom: 20px
+
+			&_prev
+				left: 5px
+
+			&_next
+				right: 5px
+
+		&__main
+			&_grums
+				margin-bottom: 5px
+
+			h1
+				margin-bottom: 15px
+
+			&_item
+				width: 45%
+				margin-bottom: 20px
+
+			&_filter
+				font-size: 16px
+
+				a, p
+					margin-right: 25px
+
+			&_brend
+				&--price input
+					font-size: 14px
+
+				&--item
+					font-size: 14px
+
+			&_pagination
+				padding: 0 15px
+
 
 @media only screen and (max-width : 767px)
 	body
