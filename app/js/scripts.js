@@ -5298,7 +5298,7 @@ $(function() {
       prevEl: '.catalog__slider_prev',
     },
     breakpoints: {
-      1200: {
+      992: {
         slidesPerView: 2,
         spaceBetween: 10
       }

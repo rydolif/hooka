@@ -9,7 +9,6 @@
 
 		&__busket
 			padding: 0 10px
-			height: 81px
 			font-size: 16px
 
 		&__slider_slide
@@ -40,6 +39,44 @@
 		height: 50px
 		line-height: 50px
 		font-size: 16px
+
+	.catalog
+		&__slider
+			max-width: 86%
+			margin-bottom: 20px
+
+			&_prev
+				left: 5px
+
+			&_next
+				right: 5px
+
+		&__main
+			&_grums
+				margin-bottom: 5px
+
+			h1
+				margin-bottom: 15px
+
+			&_item
+				width: 45%
+				margin-bottom: 20px
+
+			&_filter
+				font-size: 16px
+
+				a, p
+					margin-right: 25px
+
+			&_brend
+				&--price input
+					font-size: 14px
+
+				&--item
+					font-size: 14px
+
+			&_pagination
+				padding: 0 15px
 
 	.header
 		font-size: 14px
@@ -80,17 +117,25 @@
 
 		&__nav
 			a
-				padding: 18px 0
+				height: 50px
 
-			&_list a
-				padding: 0
+			&_list
+				padding: 15px
+				
+				a
+					padding: 0
+					height: auto
+					margin-bottom: 2px
+
+				p
+					margin-bottom: 5px
 
 		&__profile
-			padding: 18px 0
+			height: 50px
 
 		&__busket
 			padding: 5px
-			height: 55px
+			height: 50px
 			font-size: 12px
 
 			&_img
@@ -266,6 +311,8 @@
 
 
 	.footer
+		padding: 30px 0
+
 		h3
 			font-size: 18px
 			margin-bottom: 15px
