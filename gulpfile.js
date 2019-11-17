@@ -51,9 +51,9 @@ gulp.task('styles', function() {
 
 gulp.task('minjs', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
-		'app/libs/swiper/swiper.min.js', 			//----слайдер
-		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		// 'app/libs/jquery/dist/jquery.min.js',  			//----jquery
+		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
+		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(plumber())
@@ -66,10 +66,9 @@ gulp.task('minjs', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
-		'app/libs/jquery.popupoverlay.js', 				//----модалки
-		'app/libs/swiper/swiper.min.js', 			//----слайдер
-		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		// 'app/libs/jquery/dist/jquery.min.js',  			//----jquery
+		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
+		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		'app/js/common.js', // Always at the end
 	])
 	.pipe(plumber())
