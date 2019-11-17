@@ -5274,8 +5274,39 @@ $(document).ready(function() {
 
 
 $(function() {
-//---------------------------slider-----------------------
-    var swiper = new Swiper('.other__list', {
+
+//---------------------------catalog slider-----------------------
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 20000,
+    values: [ 100, 3000 ],
+    slide: function( event, ui ) {
+      $( "#amount-min" ).val( ui.values[ 0 ] + " руб" );
+      $( "#amount-max" ).val( ui.values[ 1 ] + " руб" );
+    }
+  });
+  $( "#amount-min" ).val( $( "#slider-range" ).slider( "values", 0 ) + " руб" );
+  $( "#amount-max" ).val( $( "#slider-range" ).slider( "values", 1 ) + " руб" );
+
+//---------------------------catalog slider-----------------------
+  var swiper = new Swiper('.catalog__slider', {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    navigation: {
+      nextEl: '.catalog__slider_next',
+      prevEl: '.catalog__slider_prev',
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      }
+    }
+  });
+
+//---------------------------other slider-----------------------
+  var swiper = new Swiper('.other__list', {
     slidesPerView: 6,
     spaceBetween: 30,
     breakpoints: {
@@ -5284,6 +5315,19 @@ $(function() {
         spaceBetween: 10
       }
     }
+  });
+
+//------------------------------header slider-----------------------------
+  var swiper = new Swiper('.header__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.header__next',
+      prevEl: '.header__prev',
+    },
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
   });
 
 //---------------------------tabs-----------------------
@@ -5313,20 +5357,6 @@ $(function() {
   });
 
 
-//------------------------------slider-----------------------------
-  var swiper = new Swiper('.header__slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.header__next',
-      prevEl: '.header__prev',
-    },
-    autoplay: {
-      delay: 8000,
-      disableOnInteraction: false,
-    },
-  });
-
-
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
       if($(this).scrollTop()>50){
@@ -5337,10 +5367,8 @@ $(function() {
       }
   });
 
-
-  if ($(this).scrollTop()<50){
-      $('.header').removeClass('header--active');
+  if($(this).scrollTop()>50){
+      $('.header').addClass('header--active');
   }
-
 });
 

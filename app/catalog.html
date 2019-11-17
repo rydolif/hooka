@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Кальяни</title>
+	<title>Каталог</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -147,7 +147,7 @@
 		</div>
 	</header>
 
-	<section class="content tabs">
+	<section class="catalog content">
 		<div class="content__container container">
 			
 			<div class="content__nav">
@@ -206,9 +206,6 @@
 								</div>
 							</a>
 							<a href="#" class="content__nav_search--more">
-								<!-- <span></span>
-								<span></span>
-								<span></span> -->
 								Все товары
 							</a>
 						</div>
@@ -218,287 +215,427 @@
 				<a href="#" class="content__nav_block content__nav_in" target="_blank"></a>
 				<a href="#" class="content__nav_block content__nav_tel" target="_blank"></a>
 				<a href="#" class="content__nav_block content__nav_you" target="_blank"></a>
-
-				<div class="content__tabs">
-					<a href="#content1"><img src="img/slide1.png" alt=""></a>
-					<a href="#content2"><img src="img/slide2.png" alt=""></a>
-					<a href="#content3"><img src="img/slide3.png" alt=""></a>
-					<a href="#content4"><img src="img/slide4.png" alt=""></a>
+			</div>
+			
+			<div class="catalog__wrap">
+				<div class="catalog__slider swiper-container">
+					<div class="swiper-wrapper">
+						<a href="#" class="catalog__slider_item swiper-slide"><img src="img/catalog__slider.jpg" alt=""></a>
+						<a href="#" class="catalog__slider_item swiper-slide"><img src="img/catalog__slider.jpg" alt=""></a>
+						<a href="#" class="catalog__slider_item swiper-slide"><img src="img/catalog__slider.jpg" alt=""></a>
+						<a href="#" class="catalog__slider_item swiper-slide"><img src="img/catalog__slider.jpg" alt=""></a>
+					</div>
 				</div>
+				<div class="catalog__slider_next swiper-button-next"><span></span></div>
+				<div class="catalog__slider_prev swiper-button-prev"><span></span></div>
 			</div>
 
-			<div class="content__main">
-				<ul class="content__grums">
+			<div class="catalog__main">
+
+				<ul class="catalog__main_grums content__grums">
 					<li><a href="#">В каталог</a></li>
 					<li><span>/</span></li>
 					<li><a href="#">Кальяны</a></li>
 					<li><span>/</span></li>
-					<li><a href="#">CWP</a></li>
-					<li><span>/</span></li>
-					<li><span>Кальян CWP Razor II</span></li>
+					<li><span>CWP</span></li>
 				</ul>
 
-				<div class="content__img">
-					<a href="img/tovar.jpg" class="content__img_tovar" data-fancybox="gallery" id="content1">
-						<img src="img/tovar.jpg" alt="" class="content__img_tovar--img">
-					</a>
-					<a href="img/slide1.png" class="content__img_tovar" data-fancybox="gallery" id="content2">
-						<img src="img/slide1.png" alt="" class="content__img_tovar--img">
-					</a>
-					<a href="img/slide2.png" class="content__img_tovar" data-fancybox="gallery" id="content3">
-						<img src="img/slide2.png" alt="" class="content__img_tovar--img">
-					</a>
-					<a href="img/slide3.png" class="content__img_tovar" data-fancybox="gallery" id="content4">
-						<img src="img/slide3.png" alt="" class="content__img_tovar--img">
-					</a>
-					<a href="#" class="content__img_like"><img src="img/like.png" alt=""></a>
-					<a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox class="content__img_bunner">
-						<img src="img/bunner.png" alt="" class="content__img_bunner--img">
-						<img src="img/play.png" alt="" class="content__img_bunner--play">
-						<p>Посмотрите видеообзор на <span>CWP Razor II</span></p>
-					</a>
+				<h1>Кальяны CWP</h1>
+
+				<div class="catalog__main_filter">
+					<p><b>Сортировать по</b></p>
+					<a href="#" class="active">популярности</a>
+					<a href="#">популярности</a>
+					<a href="#">возрастанию цены</a>
+					<a href="#">новинкам</a>
 				</div>
 
-				<div class="content__description">
+				<form class="catalog__main_brend">
 
-					<div class="content__description_brend">
-						<p>О бренде CWP</p>
-						<p>Артикул 011231</p>
-					</div>
-
-					<h2>Кальян CWP Razor II Black</h2>
-					<div class="content__description_price">
-						<p>25 000 руб.</p>
-						<span>В наличии</span>
-					</div>
-
-					<div class="content__description_info">
+					<div class="catalog__main_brend--cart">
+						<h3>Вы выбрали</h3>
 						<div>
-							<img src="img/size.png" alt="">
+							<a href="#" class="catalog__main_brend--clear">Очистить все</a>
+							<a href="#" class="catalog__main_brend--item"><span></span><b>Бренд: CWP</b></a>
+							<a href="#" class="catalog__main_brend--item"><span></span><b>Материал внутренней трубки: Авиационный алюминий</b></a>
+						</div>
+					</div>
+
+					<div class="catalog__main_brend--filter">
+						<h3>Бренд</h3>
+						<div>
 							<p>
-								<span>ВЫСОТА</span>
-								<b>56 см</b>
+								<input type="checkbox" id="label1">
+								<label for="label1">Alien Design</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label2">
+								<label for="label2">Art Hookah</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label3">
+								<label for="label3">Brodator</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label4">
+								<label for="label4">Desvall</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label5">
+								<label for="label5">Dschinni</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label8">
+								<label for="label8">FUMO</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label6">
+								<label for="label6">Dschinni</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label7">
+								<label for="label7">FUMO</label>
 							</p>
 						</div>
+					</div>
+
+					<div class="catalog__main_brend--filter">
+						<h3>Материал внутренней турбки</h3>
 						<div>
-							<img src="img/size2.png" alt="">
 							<p>
-								<span>ДИАМЕТР</span>
-								<b>13 мм</b>
+								<input type="checkbox" id="label-two1">
+								<label for="label-two1">Авиационный алюминий</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two2">
+								<label for="label-two2">Дюралюминий</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two3">
+								<label for="label-two3">Магналий</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two4">
+								<label for="label-two4">Нержавеющая сталь 304</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two5">
+								<label for="label-two5">Нержавеющая сталь 316</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two8">
+								<label for="label-two8">Сплав металлов</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two6">
+								<label for="label-two6">Стекло</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-two7">
+								<label for="label-two7">Магналий</label>
 							</p>
 						</div>
 					</div>
 
-					<h2>Комплектация <sup>10</sup></h2>
-					<ul class="content__description_list">
-						<li><span>Блюдце</span><span>Мундштук</span></li>
-						<li><span>Шахта</span><span>Диффузор</span></li>
-						<li><span>Силиконовый шланг</span><span>Уплотнители</span></li>
-						<li><span>Колба</span><span>Сумка</span></li>
-						<li><span>УРЖ</span><span>Щипцы</span></li>
-					</ul>
+					<div class="catalog__main_brend--filter">
+						<h3>Материал декора шахты</h3>
+						<div>
+							<p>
+								<input type="checkbox" id="label-three1">
+								<label for="label-three1">Авиационный алюминий</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three2">
+								<label for="label-three2">Дюралюминий</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three3">
+								<label for="label-three3">Магналий</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three4">
+								<label for="label-three4">Нержавеющая сталь 304</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three5">
+								<label for="label-three5">Нержавеющая сталь 316</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three8">
+								<label for="label-three8">Сплав металлов</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three6">
+								<label for="label-three6">Стекло</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-three7">
+								<label for="label-three7">Магналий</label>
+							</p>
+						</div>
+					</div>
 
-					<h2>Другие цвета <sup>3</sup></h2>
-					<div class="content__description_color">
+					<div class="catalog__main_brend--filter">
+						<h3>Система соединения</h3>
 						<div>
-							<input type="radio" id="color" name="color" checked>
-							<label for="color" style="background-color: #000"></label>
+							<p>
+								<input type="checkbox" id="label-four1">
+								<label for="label-four1">Клик</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-four2">
+								<label for="label-four2">Магнитное</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-four3">
+								<label for="label-four3">На притирках</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-four4">
+								<label for="label-four4">На уплотнителе</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-four5">
+								<label for="label-four5">Пневматическое</label>
+							</p>
+							<p>
+								<input type="checkbox" id="label-four6">
+								<label for="label-four6">Резьбовое</label>
+							</p>
 						</div>
+					</div>
+
+					<div class="catalog__main_brend--color">
+						<h3>Цвет</h3>
 						<div>
-							<input type="radio" id="color1" name="color">
-							<label for="color1" style="background-color: #d9d8df"></label>
+							<p>
+								<input type="checkbox" id="color1">
+								<label for="color1" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color2">
+								<label for="color2" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color3">
+								<label for="color3" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color4">
+								<label for="color4" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color5">
+								<label for="color5" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color6">
+								<label for="color6" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color7">
+								<label for="color7" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color8">
+								<label for="color8" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color9">
+								<label for="color9" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color10">
+								<label for="color10" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color11">
+								<label for="color11" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color12">
+								<label for="color12" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color13">
+								<label for="color13" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color14">
+								<label for="color14" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color15">
+								<label for="color15" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color16">
+								<label for="color16" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color17">
+								<label for="color17" class="red"></label>
+							</p>
+							<p>
+								<input type="checkbox" id="color18">
+								<label for="color18" class="red"></label>
+							</p>
 						</div>
+					</div>
+
+					<div class="catalog__main_brend--price">
+						<h3>Цена</h3>
 						<div>
-							<input type="radio" id="color2" name="color">
-							<label for="color2" style="background-color: blue"></label>
+
+							<div id="slider-range"></div>
+							<p>
+								<input type="text" id="amount-min" readonly>
+								<b>-</b>
+								<input type="text" id="amount-max" readonly>
+							</p>
 						</div>
-						<br>
-						<p><b>Черный</b> / Белый / Синий</p>
+					</div>
+
+				</form>
+
+				<div class="catalog__main_list">
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
+						</div>
 					</div>
 					
-					<div class="content__description_btn">
-						<button class="btn">Добавить в корзину</button>
-						<div>
-							<button>-</button>
-							<input type="number" value="1" placeholder="1">
-							<button>+</button>
-						</div>
-					</div>
-
-					<p class="content__description_text"><img src="img/garantia.png" alt="">Только оригинальный товар <br><a href="#">Гарантия подлинности</a></p>
-					<p class="content__description_text"><img src="img/car.png" alt=""><a href="">Доставка по Москве <br>в день заказа</a></p>
-
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<section class="tabs">
-		<div class="container">
-			<ul class="tabs__list">
-				<li><a href="#one">Особенности</a></li>
-				<li><a href="#two">Описание</a></li>
-				<li><a href="#three">Характеристики</a></li>
-				<li><a href="#four">Дополнительно</a></li>
-			</ul>
-
-			<div id="one" class="tabs__wrap">
-				<div class="other__list">
-					<div class="tabs__item other__item">
-						<img src="img/tovar.jpg" alt="" class="other__item_img">
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
 						<div class="other__item_content">
 							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iure corporis, ea earum, sint adipisci.</p>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
 						</div>
 					</div>
-					<div class="tabs__item other__item">
-						<img src="img/tovar.jpg" alt="" class="other__item_img">
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
 						<div class="other__item_content">
 							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iure corporis, ea earum, sint adipisci.</p>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
 						</div>
 					</div>
-					<div class="tabs__item other__item">
-						<img src="img/tovar.jpg" alt="" class="other__item_img">
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
 						<div class="other__item_content">
 							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis iure corporis, ea earum, sint adipisci.</p>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
 						</div>
 					</div>
-				</div>
-			</div>
-
-			<div id="two" class="tabs__wrap">
-				<div class="tabs__description">
-					<div class="tabs__description_block">
-						<h2>lorem</h2>
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae adipisci odio dolorum, reiciendis corrupti. Totam temporibus veritatis explicabo expedita recusandae.</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ex perspiciatis similique eum at ea recusandae soluta debitis tempora quod doloribus iste voluptate totam nostrum, consequuntur doloremque voluptatibus, ipsum possimus consectetur quos, voluptates deserunt culpa laboriosam? Doloremque sit, rerum hic!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ex perspiciatis similique eum at ea recusandae soluta debitis tempora quod doloribus iste voluptate totam nostrum, consequuntur doloremque voluptatibus, ipsum possimus consectetur quos, voluptates deserunt culpa laboriosam? Doloremque sit, rerum hic!</p>
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
+						</div>
 					</div>
-					<div class="tabs__description_block">
-						<img src="img/tovar.jpg" alt="">
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div id="three" class="tabs__wrap">
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum incidunt iste dolorem ducimus vitae velit sit doloribus temporibus magnam veritatis. Voluptates possimus doloremque odio magnam! Eaque tempora aspernatur enim sequi.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam laudantium minima quod labore ab repellendus porro, hic libero, aut ratione deserunt impedit itaque nam beatae voluptatum recusandae, quo, quia officiis?</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
-					<li>Lorem ipsum dolor sit amet.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
-					<li>Lorem ipsum dolor sit amet.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque debitis, mollitia corporis necessitatibus libero, nemo quos eos reiciendis dignissimos magni.</li>
-				</ul>
-			</div>
-			<div id="four" class="tabs__wrap">
-				<img src="img/tabs.jpg" alt="">
-			</div>
-		</div>
-	</section>
-
-	<section class="other">
-		<div class="container">
-			
-			<h2>Другие товары от бренда <span>CWP</span></h2>
-
-			<div class="other__list">
-				
-				<div class="other__item">
-					<a href="#">
-						<img src="img/other--item.jpg" alt="" class="other__item_img">
-					</a>
-					<a href="#" class="other__item_like">
-						<img src="img/like.png" alt="">
-					</a>
-					<div class="other__item_content">
-						<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-						<p class="other__item_cat">Кальяны CWP</p>
-						<p class="other__item_price">25 000 руб. </p>
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
+						</div>
 					</div>
-				</div>
-				
-				<div class="other__item">
-					<a href="#">
-						<img src="img/other--item.jpg" alt="" class="other__item_img">
-					</a>
-					<a href="#" class="other__item_like">
-						<img src="img/like.png" alt="">
-					</a>
-					<div class="other__item_content">
-						<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-						<p class="other__item_cat">Кальяны CWP</p>
-						<p class="other__item_price">25 000 руб. </p>
+
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
+						</div>
 					</div>
-				</div>
-				
-				<div class="other__item">
-					<a href="#">
-						<img src="img/other--item.jpg" alt="" class="other__item_img">
-					</a>
-					<a href="#" class="other__item_like">
-						<img src="img/like.png" alt="">
-					</a>
-					<div class="other__item_content">
-						<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-						<p class="other__item_cat">Кальяны CWP</p>
-						<p class="other__item_price">25 000 руб. </p>
+					
+					<div class="catalog__main_item other__item">
+						<a href="#">
+							<img src="img/other--item.jpg" alt="" class="other__item_img">
+						</a>
+						<a href="#" class="other__item_like">
+							<img src="img/like.png" alt="">
+						</a>
+						<div class="other__item_content">
+							<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
+							<p class="other__item_cat">Кальяны CWP</p>
+							<p class="other__item_price">25 000 руб. </p>
+						</div>
 					</div>
-				</div>
-				
-				<div class="other__item">
-					<a href="#">
-						<img src="img/other--item.jpg" alt="" class="other__item_img">
-					</a>
-					<a href="#" class="other__item_like">
-						<img src="img/like.png" alt="">
-					</a>
-					<div class="other__item_content">
-						<h3><a href="#">Кальян CWP Razor II вторая строчка</a></h3>
-						<p class="other__item_cat">Кальяны CWP</p>
-						<p class="other__item_price">25 000 руб. </p>
-					</div>
+
 				</div>
 
-			</div>
-
-		</div>
-	</section>
-
-	<section class="question">
-		<div class="container">
-			
-			<h2>Вопросы по товару <span>CWP Razor II</span></h2>
-			<p class="question__sub-title">
-				Если вы хотите узнать дополнительную информацию по товару - задайте свой вопрос через форму или позвоните по номеру 
-				<a href="tel:+74951553777">+7 495 155 3 777</a> 
-				<br>Наши менеджреы проконсультируют вас и помогут сделать правильный выбор.
-			</p>
-
-			<form action="" class="question__form">
-				<div class="question__line">
-					<button class="question__btn"></button>
-					<input type="text" placeholder="Задайте вопрос">
-				</div>
-			</form>
-
-			<div class="question__item">
-				<p class="question__item_name">Гость <span>(3 дня назад)</span></p>
-				<p class="question__item_description">Как мне приобрести данный кальян?</p>
-				<div class="question__item_comment">
-					<img src="img/operator.png" alt="">
-					<p>Данный кальян вы можете приобрести по адресу Москва, Перева 43</p>
-				</div>
-			</div>
-			<div class="question__item">
-				<p class="question__item_name">Гость <span>(3 дня назад)</span></p>
-				<p class="question__item_description">Как мне приобрести данный кальян?</p>
-				<div class="question__item_comment">
-					<img src="img/operator.png" alt="">
-					<p>Данный кальян вы можете приобрести по адресу Москва, Перева 43</p>
+				<div class="catalog__main_pagination">
+					<p>Показано с 1 по 21 из 50 (всего 3 страниц)</p>
+					<ul>
+						<li><a href="#" class="active">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#" class="next">Далее</a></li>
+					</ul>
 				</div>
 			</div>
 
@@ -631,6 +768,8 @@
 	</footer>
 
 	<script src="js/scripts.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </body>
 </html>
