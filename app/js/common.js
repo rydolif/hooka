@@ -16,6 +16,11 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('.catalog__main_brend--filter div').slimScroll({
+        height: '235px'
+    });
+});
 
 $(function() {
 
@@ -27,12 +32,6 @@ $(function() {
       nextEl: '.catalog__slider_next',
       prevEl: '.catalog__slider_prev',
     },
-    breakpoints: {
-      992: {
-        slidesPerView: 2,
-        spaceBetween: 10
-      }
-    }
   });
 
 //---------------------------other slider-----------------------
