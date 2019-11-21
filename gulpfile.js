@@ -43,7 +43,7 @@ gulp.task('minstyles', function() {
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
-	.pipe(rename({ suffix: '.', prefix : '' }))
+	.pipe(rename({ suffix: '', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browsersync.reload( {stream: true} ))
