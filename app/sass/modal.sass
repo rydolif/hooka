@@ -1,0 +1,224 @@
+@import "base"
+
+
+.modal
+	position: relative
+	margin-top: 40px
+	max-width: 500px
+	width: 100%
+	height: auto
+	padding: 20px 40px
+	background-color: #fff
+	z-index: 1
+
+	h3
+		font-size: 31px
+		font-weight: 900
+		margin-bottom: 15px
+
+	p
+		color: #a6a6a6
+		font-size: 18px
+		margin-bottom: 15px
+		display: flex
+		justify-content: space-between
+
+	a
+		color: $accent
+		font-weight: 700
+
+		&:hover,
+		&:focus
+			color: $accent
+			text-decoration: underline
+
+	span
+		color: $text
+		font-size: 18px
+
+	&__logo
+		margin-bottom: 15px
+		width: 70px
+
+	&__title
+		margin-bottom: 15px
+
+		h3
+			margin-bottom: 0
+
+	&__btn
+		position: relative
+		background-color: #fff
+		color: #000
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 60px
+		line-height: 60px
+		border: 1px solid #a6a6a6
+		outline: none
+		background: #fff
+		text-align: center
+		transition: all .6s
+		font-size: 20px
+		letter-spacing: .2px
+		font-weight: 500
+		color: #a6a6a6
+		width: 100%
+		margin-bottom: 15px
+
+		&:hover,
+		&:focus
+			outline: none
+			text-decoration: none
+			cursor: pointer
+			background-color: $accent
+			color: #fff
+
+	input
+		color: $text
+		font-size: 20px
+		height: 60px
+		line-height: 60px
+		border: 1px solid #a6a6a6
+		border-radius: 0
+
+		&::placeholder
+			color: #a6a6a6
+			font-size: 20px
+			height: 60px
+			line-height: 60px
+
+	&__link
+		display: block
+		font-size: 18px
+		font-weight: 700
+		color: $accent
+
+		&:hover,
+		&:focus
+			text-decoration: underline
+			color: $accent
+
+	&__line
+		margin-bottom: 15px
+
+	&__checkbox
+		margin-top: 40px
+		
+		a
+			color: $text
+
+			&:hover,
+			&:focus
+				color: $accent
+
+
+		label
+			position: relative
+			padding-left: 30px
+			cursor: pointer
+			margin-bottom: 0
+			margin-right: 0
+			font-size: 16px
+			color: #a6a6a6
+			line-height: 1
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+
+			&::before
+				width: 15px
+				height: 15px
+				border-radius: 3px
+				border: 1px solid $accent
+
+			&::after
+				width: 9px
+				height: 9px
+				border-radius: 3px
+				border: 1px solid $accent
+				background: $accent
+				left: 3px
+				top: 3px
+				transition: all .6s
+
+		input[type="checkbox"]
+			display: none
+
+		input[type="checkbox"]:checked + label::after
+			transform: scale(1)
+
+		input[type="checkbox"] + label::after
+			transform: scale(0)
+	
+	&__code
+		width: 40%
+		text-align: center
+		font-size: 32px !important
+		color: $accent !important
+
+		&::placeholder
+			font-size: 32px !important
+
+	&__back
+		margin-bottom: 25px
+		display: block
+
+		img
+			width: 60px
+
+
+.close
+	position: absolute
+	right: 0
+	top: -35px
+	height: 25px
+	width: 40px
+	display: block
+	border: none
+	cursor: pointer
+	transition: all .6s
+	background-color: transparent
+
+	&:hover, &:focus
+		outline: none
+
+		span
+			background-color: red
+
+	span
+		display: block
+		position: absolute
+		left: 50%
+		top: 50%
+		background: rgba(#fff, .8)
+		transition: all .6s
+		border-radius: 2px
+		height: 30px
+		width: 3px
+
+		&:nth-child(1)
+			transform: translate(-50%, -50%) rotate(45deg)
+
+		&:nth-child(2)
+			transform: translate(-50%, -50%) rotate(-45deg)
+
+
+.list
+	padding: 50px 0
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&__item
+		width: 30%
+		margin-bottom: 20px
+	
+	.btn
+		padding: 0 5px

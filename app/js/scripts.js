@@ -99,5 +99,15 @@ $(function() {
   if($(this).scrollTop()>50){
       $('.header').addClass('header--active');
   }
+
+
+//-------------------------------попандер---------------------------------------
+  $('.modal').popup({transition: 'all 0.3s'});
+
+  $('input[type="tel"]').mask('+0 (000) 000-00-00');
+
+  $('input[type="code"]').mask('000 000');
+
+
 });
 
