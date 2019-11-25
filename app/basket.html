@@ -221,17 +221,292 @@
 				<a href="#" class="content__nav_block content__nav_you" target="_blank"></a>
 			</div>
 
-			<div class="content__main">
+			<div class="basket content__main">
+				
+				<div class="basket__title">
+					<h1>Корзина</h1>
+					<a href="#">Очистить корзину</a>
+				</div>
+
+				<div class="basket__sub-title">
+					<a href="#"><span></span>Продолжить покупки</a>
+					<a href="#"><img src="img/card.png" alt="">Клубная карта Cloudy Mone <img src="img/card_info.png" alt=""></a>
+				</div>
+
+				<div class="basket__validate">
+					<img src="img/validate.png" alt="">
+					<p>В заказе присутствуют товары, по которым превышено доступное количество.</p>
+				</div>
+
+				<form class="basket__form">
+					<div class="basket__form_tovar">
+						<div class="basket__form_tovar--title">
+							<img src="img/basket__img.png" alt="">
+							<div>
+								<p><b>Корзина для угля Meduse Design</b></p>
+								<p><span>Корзины для углей</span></p>
+								<br>
+								<div class="content__description_color">
+									<div>
+										<input type="radio" id="color" name="color" checked>
+										<label for="color" style="background-color: #000"></label>
+									</div>
+									<div>
+										<input type="radio" id="color1" name="color">
+										<label for="color1" style="background-color: #d9d8df"></label>
+									</div>
+									<div>
+										<input type="radio" id="color2" name="color">
+										<label for="color2" style="background-color: blue"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="basket__form_tovar--input">
+							<p><b>1200 РУБ</b></p>
+							<div>
+								<button>-</button>
+								<input type="number" value="1" placeholder="1">
+								<button>+</button>
+							</div>
+
+							<p><b>1200 РУБ</b></p>
+						</div>
+					</div>
+					<div class="basket__form_suma">
+						<a href="#"><img src="img/basket__suma.png" alt=""><b>У меня есть промокод</b></a>
+						<p><b>Товаров на сумму: 1200 РУБ</b></p>
+					</div>
+					<div class="basket__form_monet">
+						<div>
+							<p><b>Использовать Monetki</b></p>
+							<span><img src="img/monet.png" alt="">47</span>
+							<p>У вас 47 Monetok, в этом заказе можно списать 47 или меньше.</p>
+						</div>
+						<div class="basket__form_monet--block">
+							<div class="basket__form_monet--input">0 из 47</div>
+							<a href="#" class="basket__form_monet--btn">Применить</a>
+						</div>
+					</div>
+					<div class="basket__form_footer">
+						<p><b>Итого: 1193 РУБ</b></p>
+						<p>Будет начислено с заказа <img src="img/monet.png" alt=""> 60 Monetok</p>
+					</div>
+				</form>
+
+				<div class="basket__validate">
+					<img src="img/validate.png" alt="">
+					<p>Минимальная сумма для заказа в пределах МКАД — 1000 руб.</p>
+				</div>
+				
+				<div class="basket__data">
+					<h2>1. Личные данные</h2>
+					<form action="sendmail.php" class="basket__data_form form" method="post">
+						<div class="modal__line">
+							<input type="text" name="name" required placeholder="Как мы можем к Вам обращаться">
+						</div>
+						<div class="modal__line">
+							<input type="mail" name="mail" required placeholder="Электронная почта">
+						</div>
+						<div class="modal__line">
+							<input type="tel" name="phone" required placeholder="Номер телефона">
+						</div>
+						<div class="modal__line">
+							<button type="submit" class="btn" name="submit">Дополнительный номер телефона</button>
+						</div>
+					</form>
+					<div class="basket__data_info">
+						<img src="img/basket__data.png" alt="">
+						<h3>Условия заказа:</h3>
+						<p>
+							в пределах МКАД - 299 РУБ <br>&lt; 15 км от МКАД - 499 РУБ
+						</p>
+						<p>
+							&gt; 15 км от МКАД - инвидуально<br> (только на следующий день)
+						</p>
+						<p>
+							срочный заказ +200 РУБ<br> (только по Москве)
+						</p>
+						<a href="#">Полная информация об условиях</a>
+					</div>
+				</div>
+
+				<form  class="basket__data" method="post">
+					<h2>2. Информация по адресу</h2>
+					<div class="basket__data_form--two form">
+						<div class="modal__line basket__data_sity">
+							<input type="text" name="name" required placeholder="Город, улица, дом, строение">
+						</div>
+						<div class="modal__line basket__data_place">
+							<input type="text" name="name" required placeholder="Квартира / офис">
+							<input type="text" name="name" required placeholder="Подъезд">
+							<input type="text" name="name" required placeholder="Этаж">
+							<input type="text" name="name" required placeholder="Домофн">
+						</div>
+						<div class="modal__line">
+							<textarea name="textarea" placeholder="Комментарий по адресу"></textarea>
+						</div>
+					</div>
+					<h3>Дата и время</h3>
+					<p>
+						Заказы принимаются и обрабатываются до 20:00 по Москве
+					</p>
+					<br><br>
+					<div class="basket__data_when">
+						<div class="basket__data_when--wrap">
+							<input type="radio" id="one" name="one">
+							<label for="one">
+								<h3>24</h3>
+								<p><b>Июля</b></p>
+								<p><span>Сегодня</span></p>
+							</label>
+						</div>
+						<div class="basket__data_when--wrap">
+							<input type="radio" id="two" name="one">
+							<label for="two">
+								<h3>25</h3>
+								<p><b>Июля</b></p>
+								<p><span>Завтра</span></p>
+							</label>
+						</div>
+						<div class="basket__data_when--wrap">
+							<input type="radio" id="three" name="one" disabled>
+							<label for="three">
+								<h3>26</h3>
+								<p><b>Июля</b></p>
+								<p><span>Недоступно</span></p>
+							</label>
+						</div>
+						<div class="basket__data_when--wrap">
+							<input type="radio" id="four" name="one">
+							<label for="four">
+								<h3>27</h3>
+								<p><b>Июля</b></p>
+								<p><span>Пятница</span></p>
+							</label>
+						</div>
+						<div class="basket__data_when--wrap">
+							<input type="radio" id="five" name="one">
+							<label for="five">
+								<h3>28</h3>
+								<p><b>Июля</b></p>
+								<p><span>Суббота</span></p>
+							</label>
+						</div>
+					</div>
+					<div class="basket__data_when">
+						<div class="basket__data_when--time">
+							<input type="radio" id="time1" name="time">
+							<label for="time1">
+								С 10:00 до 14:00
+							</label>
+						</div>
+						<div class="basket__data_when--time">
+							<input type="radio" id="time2" name="time">
+							<label for="time2">
+								С 10:00 до 14:00
+							</label>
+						</div>
+						<div class="basket__data_when--time">
+							<input type="radio" id="time3" name="time" disabled>
+							<label for="time3">
+								С 10:00 до 14:00
+							</label>
+						</div>
+						<div class="basket__data_when--time">
+							<button class="basket__data_when--btn">Выбрать в ручную</button>
+						</div>
+					</div>
+					<div class="basket__data_lowercase">
+						<div class="basket__data_lowercase--text">
+							<img src="img/basket__timer.png" alt="">
+							<div>
+								<h3>Срочный заказ</h3>
+								<p><b>В течении 2 часов после оформления.</b></p>
+							</div>
+						</div>
+						<div>
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox">
+								<b>+200 РУБ</b><br>
+								<span>к стоимости заказа</span>
+							</label>
+						</div>
+					</div>
+				</form>
+
+				<form  class="basket__data" method="post">
+					<h2>3. Дополнительные возможности</h2>
+					<p><b>Способ подтверждения заказа</b></p>
+					<div class="basket__data_list-checkbox">
+						<div>
+							<span></span>
+							<input type="radio" id="list-checkbox1" name="list-checkbox">
+							<label for="list-checkbox1">
+								<b>SMS</b>
+							</label>
+							<input type="radio" id="list-checkbox2" name="list-checkbox">
+							<label for="list-checkbox2">
+								<b>Звонок на телефон</b>
+							</label>
+						</div>
+						<div>
+							<span></span>
+							<input type="radio" id="list-checkbox3" name="list-checkbox">
+							<label for="list-checkbox3">
+								<b>Позвонить за час</b>
+							</label>
+							<input type="radio" id="list-checkbox4" name="list-checkbox">
+							<label for="list-checkbox4">
+								<b>Заказ - это подарок</b>
+							</label>
+						</div>
+						<div>
+							<input type="radio" id="list-checkbox5" name="list-checkbox">
+							<label for="list-checkbox5">
+								<b>Нужно разрешение на въезд</b>
+							</label>
+							<input type="radio" id="list-checkbox6" name="list-checkbox">
+							<label for="list-checkbox6">
+								<b>Не звонить в домофн / дверь</b>
+							</label>
+						</div>
+					</div>
+					<textarea name="textarea" placeholder="Комментарий к заказу"></textarea>
+				</form>
+
+				<p class="basket__policy">
+					Нажимая на кнопку «Оформить заказ» вы соглашаетесь
+					<br>
+					<a href="#">с политикой обработки персональных данных и пользовательсикм соглашением</a>
+				</p>
 
 			</div>
 
 		</div>
 	</section>
 
+	<section class="basket__payment">
+		<div class="container">
+			<div class="basket__payment_wrap">
+				<a href="#" class="basket__payment_btn">Оформить заказ</a>
+				<div>
+					<p class="basket__payment_wrap--price">Итого: 1292 РУБ</p>
+					<p>Будет начислено с заказа <img src="img/monet.png" alt=""> 60 Monetok</p>
+				</div>
+			</div>
+			<div class="basket__payment_text">
+				<p>
+					При получении заказа обязательно нужно иметь при себе документ удостверяющий личность. Продажа табачной продукции <br>несовершолетним запрещена. 
+				</p>
+			</div>
+		</div>
+	</section>
+
 	<section class="recently other">
 		<div class="container">
 			
-			<h2>Вы недавно просматривали</h2>
+			<h2>Рекомендуем</h2>
 
 			<div class="other__list swiper-container">
 				<div class="swiper-wrapper">
@@ -357,6 +632,8 @@
 	<script src="libs/fancybox/jquery.fancybox.js"></script>
 	<script src="libs/swiper/swiper.min.js"></script>
 	<script src="libs/fancybox/jquery.fancybox.js"></script>
+	<script src="libs/jquery.mask.min.js"></script>
+	<script src="libs/jquery.popupoverlay.js"></script>
 	<script src="js/scripts.js"></script>
 
 </body>
