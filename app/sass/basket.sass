@@ -233,6 +233,7 @@
 					text-decoration: none
 					cursor: pointer
 					background-color: #33354b
+					border-color: #33354b
 					color: #fff
 
 			&--block
@@ -386,6 +387,10 @@
 			label
 				width: 100%
 				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-wrap: wrap
 				color: $text
 				cursor: pointer
 				background-color: #fff
@@ -821,7 +826,8 @@
 
 				&--btn
 					font-size: 16px
-					height: 35px
+					height: 50px
+					margin-bottom: 15px
 
 			&_list-checkbox
 				margin: 10px 0
@@ -847,3 +853,6 @@
 
 			&_btn
 				max-width: 230px
+
+				&::after
+					border-radius: 8px
