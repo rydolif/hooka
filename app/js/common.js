@@ -118,24 +118,24 @@ $(function() {
 //-----------------------------mobile-hamburger-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');
-    $('.header__nav').toggleClass('header__nav--active');
+    $('.header--mob__nav').toggleClass('header--mob__nav--active');
     $('body').toggleClass('no-scroll');
-    $('.header__search').toggleClass('header__search--menu');
+    $('.header--mob__search').toggleClass('header--mob__search--menu');
   });
 
 //-----------------------------mobile-search-----------------------------
-  $('.header__search_button').hover(function() {
-    $('.header__search_form').toggleClass('header__search_form--active');
+  $('.header--mob__search_button').hover(function() {
+    $('.header--mob__search_form').toggleClass('header--mob__search_form--active');
   });
 
-//-----------------------------mobile-footer-acardeon---------------------------
-  $(".footer__col ul").slideUp("slow");
+//-----------------------------mobile-footer--mob-acardeon---------------------------
+  $(".footer--mob__col ul").slideUp("slow");
   $(".active ul").slideDown("slow");
 
-  $(".footer__col h3").on("click", function(){
+  $(".footer--mob__col h3").on("click", function(){
     if ($(this).parent().hasClass('active')) {
       $(this).parent().removeClass('active');
-      $(".footer__col ul").slideUp("slow");
+      $(".footer--mob__col ul").slideUp("slow");
     }
     else {
       $(".active ul").slideUp("slow");
@@ -146,13 +146,13 @@ $(function() {
   });
 
 //-----------------------------mobile-header-acardeon---------------------------
-  $(".header__nav_wrap ul").slideUp("slow");
+  $(".header--mob__nav_wrap ul").slideUp("slow");
   $(".active ul").slideDown("slow");
 
-  $(".header__nav_wrap p").on("click", function(){
+  $(".header--mob__nav_wrap p").on("click", function(){
     if ($(this).parent().hasClass('active')) {
       $(this).parent().removeClass('active');
-      $(".header__nav_wrap ul").slideUp("slow");
+      $(".header--mob__nav_wrap ul").slideUp("slow");
     }
     else {
       $(".active ul").slideUp("slow");

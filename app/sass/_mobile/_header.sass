@@ -70,13 +70,14 @@
 				transform: translate3d(0, -8px, 0) rotate(-45deg)
 
 
-.header
+.header--mob
 
 	&__container
 		display: flex
 		justify-content: space-between
 		align-items: center
 		flex-wrap: wrap
+		padding: 0
 
 	&__tel,
 	&__login,
@@ -272,7 +273,7 @@
 
 		&::before
 			background-color: #20212a
-			height: 1px
+			height: 0
 
 		&::after
 			height: 100%
@@ -280,6 +281,9 @@
 			background-color: #20212a
 
 		&--menu
+			&::before
+				height: 1px
+
 			&::after
 				right: 0		
 
