@@ -1,0 +1,68 @@
+
+
+.footer
+	background-color: #20212a
+	color: #fff
+
+	a
+		color: #fff
+		font-size: 10px
+		font-weight: 500
+
+
+	&__logo
+		display: block
+		width: 90px
+		margin-bottom: 15px
+
+		img
+			width: 100%
+
+	&__col
+		padding: 8px 15px
+		border-bottom: 1px solid #292a32
+
+		h3
+			position: relative
+			font-size: 10px
+			text-transform: uppercase
+			line-height: 1
+
+		span
+			display: block
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translate(0, -40%) rotate(45deg)
+			width: 6px
+			height: 6px
+			border-left: 2px solid #fff
+			border-top: 2px solid #fff
+			transition: all .6s
+
+		ul
+			margin-top: 10px
+
+	.active
+		span
+			transform: translate(0, -40%) rotate(-135deg)
+
+	&__copy
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		align-items: center
+		text-align: center
+		font-size: 9px
+		padding: 15px 0
+
+		p
+			width: 100%
+
+		div
+			text-align: left
+			p
+				font-size: 6px
+
+			img
+				width: 33px

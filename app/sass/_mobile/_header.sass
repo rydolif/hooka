@@ -1,0 +1,320 @@
+@import "base"
+
+.no-scroll
+	overflow: hidden
+
+.hamburger
+	position: absolute
+	left: 50%
+	top: 50%
+	padding: 0
+	transform: translate(-50%, -50%)
+	border: none
+	background-color: transparent
+	transition: all .3s
+
+	&:focus,
+	&:hover
+		outline: none
+
+	&__box
+		position: relative
+		display: inline-block
+		width: 30px
+		height: 20px
+		perspective: 80px
+
+	&__item
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translate(0, -50%)
+		width: 100%
+		height: 4px
+		background-color: #fff
+		transition: all .2s
+		bottom: 0
+
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			right: 0
+			top: -8px
+			background-color: #fff
+			width: 100%
+			height: 4px
+			transition: transform 0s 0.1s
+
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			right: 0
+			top: 8px
+			background-color: #fff
+			width: 100%
+			height: 4px
+			transition: transform 0s 0.1s
+
+
+
+	&--active
+		z-index: 1001
+		.hamburger__item
+			background-color: transparent
+			transform: rotateY(180deg)
+			&::before
+				transform: translate3d(0, 8px, 0) rotate(45deg)
+			&::after
+				transform: translate3d(0, -8px, 0) rotate(-45deg)
+
+
+.header
+
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+
+	&__tel,
+	&__login,
+	&__busket,
+	&__hamburger
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #20212a
+		height: 50px
+		z-index: 2
+
+	&__tel,
+	&__login
+		flex-grow: 10
+
+	&__busket,
+	&__hamburger
+		flex-grow: 1
+		min-width: 50px
+
+	&__hamburger
+		position: relative
+		border-right: 1px solid #3a3b43
+
+	&__nav
+		position: fixed
+		top: 80px
+		left: -100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		background-color: #20212a
+		width: 100vw
+		height: 100vh
+		z-index: 1000
+		transition: all .6s
+		text-align: center
+		overflow: auto
+		padding-bottom: 80px
+
+		&_wrap
+
+			a
+				display: block
+				transition: all .6s
+				color: #fff
+				padding: 10px
+				font-size: 13px
+				line-height: 1
+				font-weight: 500
+
+				&:hover,
+				&:focus
+					color: $accent
+
+			p
+				position: relative
+				font-weight: 700
+				color: #fff
+				font-size: 13px
+				padding: 10px
+				line-height: 1
+				transition: all .6s
+
+				span
+					position: absolute
+					right: 15px
+					top: 50%
+					transform: translate(0, -60%) rotate(-135deg)
+					display: block
+					width: 10px
+					height: 10px
+					border-top: 1px solid #fff
+					border-left: 1px solid #fff
+					transition: all .6s
+
+			ul
+				background-color: #fff
+				text-align: left
+
+			li
+				border-bottom: 1px solid #f3f3f3
+
+				a
+					color: $text
+					padding: 5px 10px
+					
+					&:hover,
+					&:focus
+						color: $accent
+			
+		&_soc
+			display: flex
+			justify-content: space-around
+			padding: 20px 30px
+
+			a
+				display: block
+
+			img
+				width: 30px
+
+		&_offer
+			display: block
+			text-align: left
+			padding: 0 15px 15px
+			color: #fff
+			transition: all .6s
+
+			&:hover,
+			&:focus
+				color: $accent
+
+		&_tel
+			color: #fff
+			font-weight: 500
+			font-size: 11px
+			margin-bottom: 10px
+
+			a
+				color: $accent
+				font-size: 13px
+				font-weight: 700
+
+				&:hover,
+				&:focus
+					text-decoration: underline
+
+		.active
+			p
+				background-color: #f7f7f7
+				color: $text
+
+				span
+					border-color: #20212a
+					transform: translate(0, -50%) rotate(45deg)
+			
+		&--active
+			left: 0
+
+	&__logo
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 50px
+		width: 51px
+		background-image: linear-gradient(to right, #be9465 0%, #f7deb6)
+		z-index: 2
+
+		img
+			width: 30px
+			height: 30px
+
+	&__login
+		border-right: 1px solid #3a3b43
+
+	&__busket
+		img
+			width: 20px
+
+		&_img
+			position: relative
+
+			span
+				position: absolute
+				right: -2px
+				bottom: -5px
+				display: block
+				border-radius: 50%
+				background-image: linear-gradient(to right, #be9465 0%, #f7deb6)
+				width: 12px
+				height: 12px
+				font-size: 9px
+				text-align: center
+				line-height: 12px
+				color: $text
+	
+	&__search
+		position: relative
+		width: 100%
+		transition: all .3s
+		z-index: 1
+
+		&::after,
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			width: 100%
+			transition: all .6s
+			z-index: -2
+
+		&::before
+			background-color: #20212a
+			height: 1px
+
+		&::after
+			height: 100%
+			right: 100%
+			background-color: #20212a
+
+		&--menu
+			&::after
+				right: 0		
+
+		button, input
+			height: 30px
+			outline: none
+	
+		&_button
+			background-image: linear-gradient(to right, #be9465 0%, #f7deb6)
+			border: none
+			outline: none
+			height: 100%
+			margin: 0 auto
+			display: block
+			width: 51px
+
+		&_form
+			display: flex
+			position: absolute
+			bottom: 100%
+			width: 100%
+			border-bottom: 1px solid #f3f3f3
+			transition: all .6s
+			z-index: 1
+
+			button
+				background-color: #fff
+				border: none
+				width: 50px
+
+			input
+				padding: 0
+				background-color: #fff
+				border-radius: 0
+
+			&--active
+				bottom: 0
+

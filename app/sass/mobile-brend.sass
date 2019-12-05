@@ -1,0 +1,58 @@
+@import "_mobile/header"
+@import "_mobile/footer"
+
+
+.catalog
+	padding: 15px 0
+	overflow: hidden
+	
+
+	&__slider
+		max-width: 45%
+		overflow: visible
+		
+
+		img
+			width: 100%
+
+.brend
+	padding: 15px 0
+
+	h1
+		font-size: 17px
+		line-height: 1
+		margin-bottom: 15px
+		padding: 0 7px
+
+	h2
+		font-size: 10px
+		border-top: 1px solid #f7f7f7
+		padding: 5px 7px
+
+	ul
+		padding: 0 7px
+		background-color: #f7f7f7
+
+	li
+		border-bottom: 1px solid #efefef
+
+	a
+		display: block
+		font-size: 13px
+		line-height: 1
+		padding: 5px 0
+		color: $text
+		font-weight: 700
+		transition: all .6s
+
+		&:hover,
+		&:focus
+			color: $accent
+
+
+@media only screen and (max-width : 480px)
+	.brend
+
+
+@media only screen and (max-width : 320px)
+	.brend
