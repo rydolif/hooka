@@ -49,6 +49,14 @@ $(function() {
       992: {
         slidesPerView: 4.5,
         spaceBetween: 10
+      },
+      567: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10
       }
     }
   });
@@ -124,7 +132,7 @@ $(function() {
   });
 
 //-----------------------------mobile-search-----------------------------
-  $('.header--mob__search_button').hover(function() {
+  $('.header--mob__search').hover(function() {
     $('.header--mob__search_form').toggleClass('header--mob__search_form--active');
   });
 
@@ -159,6 +167,23 @@ $(function() {
       $(".active").removeClass('active');
       $(this).parent().addClass('active');
       $(".active ul").slideDown("slow");
+    }
+  });
+
+//-----------------------------mobile-info---------------------------
+  $(".info--mob__description").slideUp("slow");
+  $(".active .info--mob__description").slideDown("slow");
+
+  $(".info--mob__title").on("click", function(){
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(".info--mob__description").slideUp("slow");
+    }
+    else {
+      $(".active .info--mob__description").slideUp("slow");
+      $(".active").removeClass('active');
+      $(this).parent().addClass('active');
+      $(".active .info--mob__description").slideDown("slow");
     }
   });
 

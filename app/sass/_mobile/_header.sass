@@ -313,12 +313,71 @@
 				background-color: #fff
 				border: none
 				width: 50px
-
+				background-image: url(../img/mobile/header__input.png)
+				background-repeat: no-repeat
+				background-position: center
+								
 			input
-				padding: 0
+				padding: 0 5px
 				background-color: #fff
 				border-radius: 0
+				font-size: 14px
+				color: $text
+				font-weight: 700
 
 			&--active
 				bottom: 0
 
+			&:hover
+				button
+					background-image: url(../img/mobile/header__dowload.png)
+					overflow: hidden
+					animation: hover 8s linear infinite
+
+				.header--mob__search_list
+					opacity: 1
+					top: 100%
+
+		&_list
+			position: absolute
+			top: -100%
+			right: 0
+			left: 0
+			z-index: 5
+			padding-left: 50px
+			background-color: #f7f7f7
+			opacity: 0
+			transition: all .6s
+
+			li
+				border-bottom: 1px solid #ececec
+
+
+			a
+				display: flex
+				justify-content: space-between
+				align-items: center
+				color: $text
+				font-size: 13px
+				background-color: #f7f7f7
+				font-weight: 700
+				padding: 5px 10px 5px 0
+
+				&:hover
+					background-color: #ececec
+
+			span
+				font-size: 9px
+				color: #a6a6a6
+
+			b
+				color: $accent
+
+@keyframes hover
+	
+	0%
+		transform: rotate(0deg)
+
+
+	100%
+		transform: rotate(360deg)

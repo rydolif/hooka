@@ -1,0 +1,281 @@
+@import "_mobile/header"
+@import "_mobile/footer"
+
+
+
+.content
+	margin-top: 0
+	padding-top: 5px
+	padding-bottom: 0
+
+	h2
+		font-size: 17px
+		padding: 0 10px
+		margin-bottom: 5px
+
+	&__container
+		padding: 0
+
+	&__main,
+	&__description,
+	&__img
+		width: 100%
+
+	&__img
+		&_tovar
+			margin-bottom: 0
+
+		&_bunner
+			font-size: 9px
+			padding: 15px
+			margin-bottom: 10px
+
+			&--play
+				width: 30px
+				height: 30px
+
+			&--img
+				max-width: auto
+				max-height: 100%
+
+	&__grums
+		padding: 0 10px
+		font-size: 10px
+		margin-bottom: 5px
+
+	&__description
+
+		h2
+			font-size: 14px
+			margin-bottom: 10px
+
+		&_brend
+			width: 100%
+			font-size: 9px
+			margin-bottom: 5px
+			padding: 0 10px
+
+		&_price
+			padding: 0 10px
+			width: 100%
+			margin-bottom: 5px
+
+			p, span
+				font-size: 9px
+
+		&_info
+			width: 100%
+			justify-content: center
+
+			img
+				width: 35px
+				height: 35px
+
+			span
+				font-size: 12px
+
+			b
+				font-size: 15px
+
+		&_list
+			padding: 0 10px
+			margin-bottom: 10px
+
+			li
+				font-size: 9px
+				margin-bottom: 3px
+
+		&_color
+			align-items: center
+			padding: 0 10px
+
+			div
+				margin-right: 15px
+
+			p
+				font-size: 9px
+				width: auto
+
+			label
+				width: 20px
+				height: 20px
+				margin-bottom: 0
+
+			input[type="radio"]:checked + label
+				border: 5px solid $accent
+
+		&_btn
+			position: relative
+			padding: 0 10px
+
+			.other__item_like
+				right: 10px
+				top: 0
+				background-color: #f7f7f7
+				width: 30px
+				height: 30px
+
+				svg
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					width: 20px
+
+			.btn
+				font-size: 10px !important
+				height: 30px
+				line-height: 30px
+
+			button, input
+				&::placeholder
+					line-height: 30px
+
+			div
+				height: 30px
+
+				button, input
+					font-size: 13px
+					line-height: 30px
+					height: 30px
+
+					&::placeholder
+						line-height: 30px
+
+				button
+					padding: 0 7px
+
+				input
+					width: 30px
+
+		&_text
+			font-size: 8px
+			padding-left: 25px
+			margin-bottom: 0
+
+			img
+				max-height: 11px
+				max-width: 18px
+				left: 0
+
+	&__main
+		padding-top: 0
+
+	&--mob
+		&__description_wrap
+			padding: 0 10px
+			width: 100%
+			display: flex
+			justify-content: space-between
+			margin-bottom: 15px
+
+			p
+
+				&:last-child
+					padding-left: 0
+					padding-right: 20px
+					text-align: right
+
+					img
+						right: 0
+						left: auto
+
+.other
+	padding: 15px 0
+
+	h2
+		font-size: 14px
+		line-height: 1
+		margin-bottom: 8px
+
+	&__container
+		padding: 0 10px
+
+	&__item
+		h3
+			font-size: 9px
+			margin-bottom: 4px
+
+		p
+			font-size: 8px
+
+		&_cat
+			margin-bottom: 3px
+
+		&_content
+			padding: 5px
+
+		&_like
+			top: 5px
+			right: 5px
+
+			svg
+				width: 13px
+
+
+.info--mob
+
+	&__container
+		padding: 0 10px
+		background-color: #f7f7f7
+
+	&__content
+		border-bottom: 1px solid #ededed
+
+		h2
+			font-size: 17px
+
+	&__title
+		position: relative
+		font-size: 14px
+		line-height: 1
+		padding: 5px 0
+
+		span
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translate(0, -50%)
+			display: block
+			width: 14px
+			height: 14px
+			border: 1px solid $text
+			border-radius: 50%
+			background-color: #fff
+
+			&::before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-70%, -50%) rotate(135deg)
+				display: block
+				width: 5px
+				height: 5px
+				border-left: 1px solid $text
+				border-top: 1px solid $text
+				transition: all .6s
+
+	.active
+		span
+			&::before
+				transform: translate(-30%, -50%) rotate(-45deg)
+
+	
+	&__description
+		padding-top: 5px
+		display: flex
+		justify-content: space-between
+
+		img
+			max-width: 100%
+
+		h3
+			font-size: 10px
+
+		p
+			font-size: 9px
+
+
+
+
