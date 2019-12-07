@@ -1,0 +1,346 @@
+@import "_mobile/header"
+@import "_mobile/footer"
+
+
+.basket
+
+	&__form
+		&_tovar
+			padding: 10px
+
+			p
+				font-size: 9px
+				margin-bottom: 5px
+
+			img
+				width: 90px
+				height: auto
+				
+
+			&--title
+				max-width: 100%
+
+		.content__description_color
+			padding: 0
+
+			label
+				width: 15px
+				height: 15px
+
+		&_suma
+			padding: 5px 10px
+
+			a
+				font-size: 8.5px
+
+			img
+				width: 33px
+				margin-right: 5px
+
+			p
+				font-size: 11px
+		&_monet
+			padding: 5px 10px
+
+			b
+				font-size: 8.5px
+
+			img
+				width: 15px
+
+			span
+				font-size: 17px
+
+			p
+				font-size: 7px
+
+			&--block
+				background-image: linear-gradient(to right, #f7deb6 0%, #be9465)
+				padding: 5px
+
+				a
+					position: relative
+					display: block
+					width: 25px
+					height: 20px
+
+					&::before
+						content: ''
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(0, -60%) rotate(-135deg)
+						display: block
+						width: 5px
+						height: 15px
+						border-left: 2px solid #fff
+						border-top: 2px solid #fff
+
+			&--input
+				width: 120px
+				height: 20px
+				font-size: 8.5px
+				padding: 0
+				margin-right: 0
+				max-width: 100% !important
+
+		&_footer
+			padding: 5px 10px
+
+			b
+				font-size: 10px
+
+			p
+				font-size: 8.5px
+
+			img
+				width: 10px
+	
+	&--mob
+
+		h2
+			font-size: 17px
+			margin-bottom: 10px
+			
+
+		&__container
+			padding: 0 10px
+
+		&__header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 5px 0 15px
+
+			a
+				color: $text
+				font-size: 9px
+				line-height: 1
+
+			span
+				display: inline-block
+				width: 5px
+				height: 5px
+				border-top: 1px solid $accent
+				border-left: 1px solid $accent
+				transform: rotate(-45deg)
+
+		&__form
+			display: flex
+			align-items: center
+
+			button, input
+				background-color: $accent
+				border: none
+				border-radius: 0
+				color: #fff
+				font-size: 9px
+				height: 20px
+				width: 15px
+				transition: all .6s
+
+			input
+				padding: 0
+				text-align: center
+
+				&::placeholder
+					color: #fff
+
+			button
+				&:hover,
+				&:focus
+					color: $accent
+					background-color: #fff
+
+			p
+				margin-bottom: 0
+				margin-left: 5px
+		
+		&__policy
+			font-size: 7px
+			padding: 5px 10px
+			text-align: center
+			background-color: #f7f7f7
+			margin-top: 10px
+
+			a
+				color: $accent
+
+				&:hover,
+				&:focus
+					text-decoration: underline
+
+	&__data
+		padding-top: 10px
+		padding-bottom: 10px
+		margin-bottom: 0
+		margin-top: 10px
+		background-color: #f7f7f7
+
+		h2, h3
+			font-size: 11px
+
+		p
+			font-size: 9px
+
+		input
+			height: 28px
+			line-height: 25px
+			border: 5px solid #cacaca
+			font-size: 10px
+			padding: 0 4px
+
+			&::placeholder
+				line-height: 25px
+				font-size: 10px
+
+		textarea
+			height: 60px
+			border: 5px solid #cacaca
+			font-size: 10px
+			padding: 5px
+
+			&::placeholder
+				font-size: 10px
+
+		a
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			background-color: $accent
+			padding: 7px 10px
+			font-size: 10px
+			color: #fff
+			margin-bottom: 10px
+
+			span
+				position: relative
+				display: block
+				border: 1px solid #fff
+				width: 15px
+				height: 15px
+				border-radius: 50%
+
+				&::before
+					content: ''
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-70%, -50%) rotate(135deg)
+					display: block
+					width: 5px
+					height: 5px
+					border-left: 1px solid #fff
+					border-top: 1px solid #fff
+		
+		&_when
+			justify-content: space-around
+
+			&--wrap
+				width: 28%
+
+			h3
+				font-size: 17px
+				line-height: .8
+
+			p
+				line-height: 1
+
+			span
+				font-size: 7px
+
+			label
+				border: 5px solid #cacaca
+				padding: 0
+				transition: all .0s
+				min-height: 44px
+				margin-bottom: 7px
+
+			input[type="radio"]:checked + label
+				border: 0
+				padding: 5px
+
+			&--time
+				width: 31%
+
+				label
+					font-size: 9px
+					min-height: 30px
+
+		.modal__line
+			width: 100%
+			margin-bottom: 7px
+
+		.btn
+			font-size: 10px
+			color: $text
+			font-weight: 700
+			height: 28px
+			line-height: 19px !important
+			border: 5px solid #cacaca
+
+
+		&_place
+			margin-bottom: 0
+
+			input
+				width: 48%
+				margin-bottom: 10px
+
+		&_lowercase
+			img
+				width: 18px
+
+			b
+				margin-top: 3px
+				display: block
+				font-size: 9px
+
+			label
+				font-size: 9px
+				padding-left: 30px
+				
+				&::before
+					width: 25px
+					height: 25px
+					border: 5px solid #cacaca
+					border-radius: 0
+
+				&::after
+					top: 6px
+					left: 6px
+					width: 13px
+					height: 13px
+	
+	&__payment
+		&_wrap
+			background-color: #20212a
+			margin-left: 0
+			width: 100%
+			text-align: center
+			color: #fff
+
+			p
+				text-align: center
+				width: 100%
+				font-size: 10px
+				margin-bottom: 5px
+				font-weight: 600
+				font-size: 9px
+
+			img
+				width: 10px
+
+		&_btn
+			margin: 0 auto
+			height: 30px
+			font-size: 10px
+			margin-bottom: 5px
+
+			&::after
+				top: 5px
+				left: 5px
+				right: 5px
+				bottom: 5px
+

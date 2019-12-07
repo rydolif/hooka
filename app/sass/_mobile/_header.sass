@@ -3,6 +3,37 @@
 .no-scroll
 	overflow: hidden
 
+
+.up
+	position: fixed
+	right: 25px
+	bottom: -55px
+	z-index: 1001
+	transition: all .6s
+
+	&--active
+		bottom: 25px
+
+	a
+		display: block
+		width: 35px
+		height: 35px
+		background-color: #fff
+		box-shadow: 0 0 5px 0 rgba($text, .6)
+		border-radius: 50%
+		
+
+	div
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -30%) rotate(45deg)
+		width: 12px
+		height: 12px
+		border-top: 2px solid $text
+		border-left: 2px solid $text
+
+
 .hamburger
 	position: absolute
 	left: 50%
@@ -89,6 +120,9 @@
 		background-color: #20212a
 		height: 50px
 		z-index: 2
+
+	&__hamburger
+		width: 51px
 
 	&__tel,
 	&__login
@@ -310,12 +344,22 @@
 			z-index: 1
 
 			button
+				position: relative
 				background-color: #fff
 				border: none
 				width: 50px
-				background-image: url(../img/mobile/header__input.png)
-				background-repeat: no-repeat
-				background-position: center
+				overflow: hidden
+				
+				span
+					display: block
+					position: absolute
+					right: 0
+					top: 0
+					left: 0
+					bottom: 0
+					background-image: url(../img/mobile/header__input.png)
+					background-repeat: no-repeat
+					background-position: center
 								
 			input
 				padding: 0 5px
@@ -330,9 +374,10 @@
 
 			&:hover
 				button
-					background-image: url(../img/mobile/header__dowload.png)
-					overflow: hidden
-					animation: hover 8s linear infinite
+					span
+						background-image: url(../img/mobile/header__dowload.png)
+						overflow: hidden
+						animation: hover 8s linear infinite
 
 				.header--mob__search_list
 					opacity: 1
@@ -372,6 +417,7 @@
 
 			b
 				color: $accent
+
 
 @keyframes hover
 	

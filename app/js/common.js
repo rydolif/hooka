@@ -74,6 +74,15 @@ $(function() {
     },
   });
 
+//------------------------------header slider-----------------------------
+  var swiper = new Swiper('.tovar__slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.tovar__next',
+      prevEl: '.tovar__prev',
+    }
+  });
+
 //---------------------------tabs-----------------------
   $('.tabs__wrap').hide();
   $('.tabs__wrap:first').show();
@@ -105,9 +114,11 @@ $(function() {
   $(window).scroll(function(){
       if($(this).scrollTop()>50){
           $('.header').addClass('header--active');
+          $('.up').addClass('up--active');
       }
       else if ($(this).scrollTop()<50){
           $('.header').removeClass('header--active');
+          $('.up').removeClass('up--active');
       }
   });
 
@@ -185,6 +196,13 @@ $(function() {
       $(this).parent().addClass('active');
       $(".active .info--mob__description").slideDown("slow");
     }
+  });
+//-------------------------скорость якоря---------------------------------------
+  $(".up").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top - 90}, 'slow', 'swing');
   });
 
 });
