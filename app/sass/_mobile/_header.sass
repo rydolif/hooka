@@ -6,30 +6,37 @@
 
 .up
 	position: fixed
-	right: 25px
-	bottom: -55px
+	left: 50%
+	transform: translate(-50%, 0)
+	top: -55px
 	z-index: 1001
 	transition: all .6s
+	font-weight: 500
 
 	&--active
-		bottom: 25px
+		top: 25px
 
 	a
 		display: block
-		width: 35px
 		height: 35px
+		line-height: 35px
 		background-color: #fff
 		box-shadow: 0 0 5px 0 rgba($text, .6)
-		border-radius: 50%
-		
+		border-radius: 20px
+		color: $text
+		padding: 0 40px 0 30px
 
+		&:hover,
+		&:focus
+			color: $text
+		
 	div
 		position: absolute
 		top: 50%
-		left: 50%
+		left: 80%
 		transform: translate(-50%, -30%) rotate(45deg)
-		width: 12px
-		height: 12px
+		width: 10px
+		height: 10px
 		border-top: 2px solid $text
 		border-left: 2px solid $text
 
